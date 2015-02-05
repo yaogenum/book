@@ -1,0 +1,271 @@
+@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+
+
+*{
+	margin:0px;
+	padding:0px;
+}
+
+#container{background:url(images/g.jpg);
+	width:1024px;
+	height:1200px;
+	margin:auto;
+	
+}
+#header{
+	float:left;
+	width:1024px;
+	height:220px;
+	background:#508A00;
+} 
+#header_denglu{
+	font-size:13px;
+	color:#FFF;
+	float:left;
+	margin-left:720px;
+	width:424px;
+	height:24px;
+
+	display: block;
+	line-height:24px;
+}
+#header_denglu a{
+	color:#FCBE20;
+	
+	text-decoration:none;
+	font-size:12px;
+	}
+#header_logo{
+	float:left;
+	width:1024px;
+	height:146px;
+	background:url(images/11.jpg);
+}
+#header_logo_sou{
+/*border:#000 1px solid;*/
+	float:left;
+	width:302px;
+	height:40px;
+	margin-left:713px;
+	margin-top:94px;
+}
+
+#header_logo_sou_w{
+	float:left;
+	margin-left:5px;
+	margin-top:7px;
+	width:183px;
+	height:30px;
+	}
+#header_logo_sou_m{
+	float:left;
+	margin-left:1px;
+	margin-top:7px;
+	width:45px;
+	height:30px;
+	}
+
+#header_logo_sou_s a{
+	
+	float:left;
+	margin-left:1px;
+	margin-top:5px;
+	width:58px;
+	height:29px;
+	font-size:15px;
+	font-weight:bolder;
+	}
+#header_navi{
+	background:url(images/navi.gif);
+	float:left;
+	width:1024px;
+	height:50px;
+}
+#header_navi ul{
+	list-style:none;
+	width:100%;	height:50px;
+}
+#header_navi ul li{
+	float:left;
+	width:168px;height:50px;
+}
+#header_navi ul li a{
+	display: block;
+	text-align:center;
+	height:47px;
+	width:140px;
+	line-height:47px;
+	font-size:17px;
+	font-weight:bolder;
+	color:white;
+	text-decoration:none;
+}
+#header_navi ul li a:hover{
+	display:block;margin-left:10px;
+    background:url(images/onclick.gif);
+	color:#FFF;width:166px;height:49px;
+}
+#navi{
+	
+	float:left;
+	
+	margin-top:16px;
+	width:1022px;
+	height:26px;
+	}
+#navi .l{
+	font-weight:bold;
+	float:left;
+	margin-left:75px;
+	margin-top:5px;
+	font-size:14px;
+	}
+#navi .l a{
+	text-decoration:none;
+	color:#EC750D;
+	}
+#navi .r{
+	
+	float:left;
+	margin-left:420px;
+	margin-top:5px;
+	font-size:14px;
+	}
+#navi .r a{
+	color:#F00;
+	}
+#kuang{
+	padding-top:10px;
+	/*background:#F6F6F6;*/
+	float:left;
+	border:#DBDBDB 1px solid;
+	margin-top:10px;
+	margin-left:60px;
+	width:880px;
+	height:870px;
+	}
+
+#kuang_left{
+
+	float:left;
+	margin-left:30px;
+	
+	width:530px;
+	height:830px;
+	}
+#kuang_left_content{
+    border:#CCC solid 1px;
+	float:left;
+	margin-left:5px;
+	margin-top:0px;
+	width:510px;
+	height:800px;
+	}
+#kuang_left_content_math{
+   
+	float:left;
+	background:url(images/read1.jpg);
+	margin-top:15px;
+	width:510px;
+	height:150px;
+	}
+#kuang_left_content_math_navi{
+color:#C30;
+font-size:16px;
+display:block;
+line-height:33px;
+text-indent: 2em;
+background:url(images/navi.jpg);
+   font-weight:bold;
+	float:left;
+	width:510px;
+	height:33px;
+	}
+#kuang_left_content ul{
+	
+	list-style:none;
+	width:100%;	height:140px;
+}
+#kuang_left_content ul li{
+	float:left;
+	width:80px;height:24px;
+}
+#kuang_left_content ul li a{
+	display: block;
+	text-align:center;
+	height:24px;
+	width:70px;
+	line-height:24px;
+	font-size:14px;
+	
+	color:#936;
+	
+}
+#right_xiazai{
+	/*border:#000 solid 1px;*/
+	float:left;
+	margin-left:20px;
+	
+	
+	}
+ 
+#kuang_right{
+	/*border:#000 solid 1px;*/
+	float:left;
+	margin-left:16px;
+	margin-top:20px;
+	width:270px;
+	height:830px;
+	}
+#right_top{
+	background:url(images/beijing.jpg);
+	color:#000;
+	font-size:14px;
+	float:left;
+	width:270px;
+	height:300px;
+
+	margin-top:24px;
+	border-top:#ADC16E solid 2px;
+	
+}
+
+#right_top_navi{
+	width:270px;
+	margin-top:3px;
+	background:#AEDF62;
+    float:left;
+	
+	height:27px;
+}
+#right_top_navi .m{
+	display:block;
+	font-size:14px;
+	font-weight:bold;
+	color:#476F0D;
+	margin-top:3px;margin-left:5px;
+    float:left;
+	width:130px;
+	height:20px;
+	
+}
+#right_top_navi .n{
+	display:block;
+	margin-top:2px;margin-left:44px;
+    float:left;
+	width:60px;
+	height:20px;
+}
+#right_top_navi .n a{
+	text-decoration:none;
+	font-size:15px;
+	font-weight:bold;
+	color:#F7AC0B;font-family:"Arial Black", Gadget, sans-serif;
+	}
+#right_top_navi .n a:hover{
+	color:#F00;
+	}

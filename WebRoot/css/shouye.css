@@ -1,0 +1,526 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0px;
+	padding:0px;
+}
+
+#container{
+	width:1024px;
+	height:1200px;
+	margin:auto;
+	border-left:2px solid #CC0;
+	border-right:2px solid #CC0;
+	/*background:url(images/g.jpg);*/
+}
+
+#left{
+	float:left;
+	width:650px;
+	height:923px;
+	margin-left:12px;
+}
+#left_re{
+	background:url(../images/beijing.jpg);
+	margin-top:22px;
+	float:left;
+	width:650px;
+	height:218px;
+	border:#CC0 solid 1px;
+}
+#left_re_navi{
+	background:url(../images/renavi.gif);
+    float:left;
+	width:650px;
+	height:30px;
+}
+#left_re_navi .m{
+	display:block;
+	font-size:18px;
+	font-weight:bold;
+	color:#375E00;
+	margin-top:3px;margin-left:26px;
+    float:left;
+	width:130px;
+	height:20px;
+	
+}
+#left_re_navi .n{
+	display:block;
+	margin-top:2px;margin-left:380px;
+    float:left;
+	width:77px;
+	height:27px;
+}
+#left_re_navi .n a{
+	text-decoration:none;
+	font-size:15px;
+	font-weight:bold;
+	color:#F2AF11;
+	font-family:"Arial Black", Gadget, sans-serif;
+	}
+#left_re_navi .n a:hover{
+	color:#F00;
+	}
+#left_zui{background:url(../images/beijing.jpg);
+	margin-top:22px;
+	float:left;
+	width:650px;
+	height:218px;
+	border:#CC0 solid 1px;
+}
+#left_zui table{ color: #CC6600; float:left;
+margin-top:10px;font-size:14px;
+}
+#left_zui table tr{ height:22px;
+}
+#left_zui table a{ color: #CC6600;  
+text-decoration:none;font-size:14px;
+}
+#left_zui_navi{
+	background:url(../images/renavi.gif);
+    float:left;
+	width:650px;
+	height:30px;
+}
+#left_zui_navi .m{
+	display:block;
+	font-size:14px;
+	font-weight:bold;
+	color:#375E00;
+	margin-top:3px;margin-left:26px;
+    float:left;
+	width:130px;
+	height:20px;
+	
+}
+#left_zui_navi .n{
+	display:block;
+	margin-top:2px;margin-left:380px;
+    float:left;
+	width:77px;
+	height:27px;
+}
+#left_zui_navi .n a{
+	text-decoration:none;
+	font-size:14px;
+	font-weight:bold;
+	color:#F2AF11;
+	font-family:"Arial Black", Gadget, sans-serif;
+	}
+#left_zui_navi .n a:hover{
+	color:#F00;
+	}
+#left_zui a {
+	color: #C60;
+	
+	}
+#left_zui_one a{
+	font-size:14px;
+	font-weight:bold;
+	display:block;
+	text-align:center;
+	line-height:30px;
+	color:#000;
+	
+	background:url(../images/title_2.jpg);
+	}
+#left_lei{background:url(../images/beijing.jpg);
+	margin-top:22px;
+	float:left;
+	width:650px;
+	height:238px;
+	border:#CC0 solid 1px;
+}
+#left_lei_navi{
+	background:url(../images/renavi.gif);
+    float:left;
+	width:650px;
+	height:30px;
+}
+#left_lei_navi .m{
+	display:block;
+	font-size:18px;
+	font-weight:bold;
+	color:#375E00;
+	margin-top:3px;margin-left:26px;
+    float:left;
+	width:130px;
+	height:20px;
+	
+}
+#left_lei_navi .n{
+	display:block;
+	margin-top:2px;margin-left:380px;
+    float:left;
+	width:77px;
+	height:27px;
+}
+#left_lei_navi .n a{
+	text-decoration:none;
+
+	font-weight:bold;
+	color:#F2AF11;
+	font-family:"Arial Black", Gadget, sans-serif;
+	}
+#left_lei_navi .n a:hover{
+	color:#F00;
+	}
+#left_liu{background:url(../images/beijing.jpg);
+	margin-top:22px;
+	float:left;
+	width:650px;
+	height:131px;
+	border:#CC0 solid 1px;
+}
+#left_liu_navi{
+	background:url(../images/renavi.gif);
+    float:left;
+	width:650px;
+	height:30px;
+}
+#left_liu_navi .m{
+	display:block;
+	font-size:18px;
+	font-weight:bold;
+	color:#375E00;
+	margin-top:3px;margin-left:26px;
+    float:left;
+	width:130px;
+	height:20px;
+	
+}
+#left_liu_navi .n{
+	display:block;
+	margin-top:2px;margin-left:380px;
+    float:left;
+	width:77px;
+	height:27px;
+}
+#left_liu_navi .n a{
+	text-decoration:none;
+	font-size:15px;
+	font-weight:bold;
+	color:#F2AF11;
+	font-family:"Arial Black", Gadget, sans-serif;
+	}
+#left_liu_navi .n a:hover{
+	color:#F00;
+	}
+#right{
+	
+	background:#FFF;
+	float:left;
+	margin-top:19px;
+	margin-left:17px;
+	border:#9C0 solid 2px;
+	float:left;
+	width:322px;
+	height:876px;
+
+}
+#right_shangchuan{
+	background:url(../shangchuan.gif);
+	float:left;
+	width:241px;
+	height:66px;
+	margin-left:32px;
+	margin-top:0px;
+}
+#right_xiazai{
+	/*border:#000 1px solid;
+*/	float:left;
+	width:201px;
+	height:40px;
+	margin-left:40px;
+	margin-top:26px;
+	font-family:Adobe Heiti Std;
+	font-size:24px;
+}
+
+#right_top{
+	background:url(../images/beijing.jpg);
+	color:#000;
+	font-size:14px;
+	float:left;
+	width:312px;
+	height:250px;
+margin-left:4px;
+	margin-top:18px;
+	border-top:#ADC16E solid 2px;
+	
+}
+
+#right_top_navi{
+	width:312px;
+	margin-top:3px;
+	background:#AEDF62;
+    float:left;
+	
+	height:27px;
+}
+#right_top_navi .m{
+	display:block;
+	font-size:14px;
+	font-weight:bold;
+	color:#476F0D;
+	margin-top:3px;margin-left:5px;
+    float:left;
+	width:130px;
+	height:20px;
+	
+}
+#right_top_navi .n{
+	display:block;
+	margin-top:2px;margin-left:97px;
+    float:left;
+	width:60px;
+	height:20px;
+}
+#right_top_navi .n a{
+	text-decoration:none;
+	font-size:15px;
+	font-weight:bold;
+	color:#F7AC0B;font-family:"Arial Black", Gadget, sans-serif;
+	}
+#right_top_navi .n a:hover{
+	color:#F00;
+	}
+#right_xiaoshuo{
+	background:url(../images/beijing.jpg);
+	color:#000;
+	font-size:14px;
+	float:left;
+	width:312px;
+	height:250px;
+margin-left:4px;
+	margin-top:10px;
+	border-top:#ADC16E solid 2px;
+	
+}
+
+#right_xiaoshuo_navi{width:312px;
+	margin-top:3px;
+	background:#AEDF62;
+    float:left;
+	
+	height:27px;
+}
+#right_xiaoshuo_navi .m{
+	display:block;
+	font-size:14px;
+	font-weight:bold;
+	color:#476F0D;
+	margin-top:3px;margin-left:5px;
+    float:left;
+	width:130px;
+	height:20px;
+	
+}
+#right_xiaoshuo_navi .n{
+	display:block;
+	margin-top:2px;margin-left:97px;
+    float:left;
+	width:60px;
+	height:20px;
+}
+
+#right_xiaoshuo_navi .n a{
+	text-decoration:none;
+	font-size:15px;
+	font-weight:bold;
+	color:#F7AC0B;font-family:"Arial Black", Gadget, sans-serif;
+	}
+#right_xiaoshuo_navi .n a:hover{
+	color:#F00;
+	}
+#right_lianjie{
+	color:#000;
+	font-size:14px;
+	float:left;
+	width:312px;
+	height:180px;
+margin-left:4px;
+	margin-top:10px;
+	border-top:#ADC16E solid 2px;
+	border-bottom:#ADC16E solid 2px;
+background:url(../images/beijing.jpg);
+}
+
+#right_lianjie_navi{
+	background:#AEDF62;
+	margin-top:3px;
+	
+    float:left;
+	width:312px;
+	height:27px;
+}
+#right_lianjie_navi .m{
+	display:block;
+	font-size:14px;
+	font-weight:bold;
+	color:#476F0D;
+	margin-top:3px;margin-left:5px;
+    float:left;
+	width:130px;
+	height:20px;
+	
+}
+
+
+
+#right_lianjie_navi .n{
+	display:block;
+	margin-top:2px;margin-left:97px;
+    float:left;
+	width:60px;
+	height:20px;
+}
+#right_lianjie_navi .n a{
+	text-decoration:none;
+	font-size:15px;
+	font-weight:bold;
+color:#F7AC0B;font-family:"Arial Black", Gadget, sans-serif;
+	}
+#right_lianjie_navi .n a:hover{
+	color:#F00;
+	}
+#right_lianjie ul{
+	list-style:square;
+	width:100%;	height:24px;
+	float:left;margin-left:25px;
+	margin-top:9px;
+}
+#right_lianjie ul li{
+	 color: #CC6600;
+height:24px;
+}
+#right_lianjie ul li a{
+	display: block;
+	
+	height:24px;
+	
+	line-height:24px;
+	font-size:14px;
+	
+	color:#C60;
+	
+}
+#left_lei ul{
+	list-style:none;
+	width:100%;	height:16px;
+	float:left;margin-left:4px;
+	margin-top:2px;
+}
+#left_lei ul li{
+	float:left;
+	width:120px;height:16px;
+}
+#left_lei ul li a{
+	display: block;
+	text-align:center;
+	height:24px;
+	width:120px;
+	line-height:26px;
+	font-size:15px;
+	
+	color:#C60;
+	
+}
+#kuang_left_math{
+	/*border:#000 solid 1px;*/
+	
+	float:left;
+	margin-left:20px;
+	margin-top:10px;
+	width:180px;
+	height:52px;
+	}
+#kuang_left_math p{text-indent:2em;
+	/*border:#000 solid 1px;*/
+	background:url(../images/title1.jpg);
+	font-size:15px;color:#690;
+	}
+#box1 { display:inline-block; width:120px; padding:.5em;float:left; overflow:hidden; background:url(../images/title_2.jpg);0; text-align:center; font-size:15px;margin-left:15px;margin-top:20px; }
+#box2 { display:inline-block; width:120px; padding:.5em;float:left; overflow:hidden; background:url(../images/title_2.jpg); text-align:center; font-size:15px;margin-left:15px;margin-top:20px; }
+#box3 { display:inline-block; width:120px; padding:.5em;float:left; overflow:hidden; background:url(../images/title_2.jpg); text-align:center; font-size:15px;margin-left:15px;margin-top:20px; }
+#box4 { display:inline-block; width:120px; padding:.5em;float:left; overflow:hidden; background:url(../images/title_2.jpg); text-align:center; font-size:15px;margin-left:15px;margin-top:20px; }
+#box5 { display:inline-block; width:120px; padding:.5em;float:left; overflow:hidden; background:url(../images/title_2.jpg); text-align:center; font-size:15px;margin-left:60px;margin-top:20px; }
+#box6 { display:inline-block; width:120px; padding:.5em;float:left; overflow:hidden; background:url(../images/title_2.jpg); text-align:center; font-size:15px;margin-left:15px;margin-top:20px; }
+#box7 { display:inline-block; width:120px; padding:.5em;float:left; overflow:hidden; background:url(../images/title_2.jpg); text-align:center; font-size:15px;margin-left:15px;margin-top:20px; }
+
+#box11{margin-left:10px;color:#CC6600;font-weight:bold;float:left;width:300px;height:29px;}
+#box11 a{margin-left:10px;}
+/*#box22{margin-left:10px;color:#CC6600;font-weight:bold;float:left;}
+#box22 a{margin-left:10px;}
+#box33{margin-left:10px;color:#CC6600;font-weight:bold;float:left;}#box33 a{margin-left:10px;}
+#box44{margin-left:10px;color:#CC6600;font-weight:bold;float:left;}#box44 a{margin-left:10px;}
+#box55{margin-left:10px;color:#CC6600;font-weight:bold;float:left;}#box55 a{margin-left:10px;}
+#box66{margin-left:10px;color:#CC6600;font-weight:bold;float:left;}#box66 a{margin-left:10px;}
+#box77{margin-left:10px;color:#CC6600;font-weight:bold;float:left;}#box77 a{margin-left:10px;}*/
+
+#author0{width:50px;float:left;}
+#author10{float:left;}
+#author20{float:left;}
+#author30{float:left;}
+#author40{float:left;}
+#author50{float:left;}
+#author60{float:left;}
+
+#right_xiaoshuo ul li{
+list-style:none;
+width:300px;
+height:30px;
+font-size:14px;
+
+color:#C60;
+}
+#right_xiaoshuo ul {
+
+width:300px;
+height:auto;
+float:left;
+margin-left:25px;
+}
+#right_top ul li{
+list-style:none;
+width:280px;
+height:30px;
+font-size:14px;
+
+color:#C60;
+}
+#right_top ul {
+
+width:280px;
+height:auto;
+float:left;
+margin-left:25px;
+}
+#left_liu ul li{
+list-style:square;
+width:280px;
+height:5px;
+font-size:16px;
+
+color:#C60;
+}
+#left_liu ul {
+margin-top:6px;
+width:260px;
+height:auto;
+float:left;
+margin-left:25px;
+}
+#left_liu ul li a{
+text-decoration:none;
+font-size:14px;
+
+color:#C60;
+}
+
+
+
+
+
+

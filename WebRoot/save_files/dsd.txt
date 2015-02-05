@@ -1,0 +1,524 @@
+http://www.amazon.cn/gp/search/ref=sr_in_-2_p_4_15?rh=n%3A2016156051%2Ck%3A%E9%92%B1%E5%8C%85+%E7%94%B7%2Cp_4%3AMEXICAN+%E7%A8%BB%E8%8D%89%E4%BA%BA%7CSEPTW多态，OLVES+%E4%B8%83%E5%8C%B9%E7%8B%BC%7CTUCANO+%E5%95%84%E6%9C%A8%E9%B8%9F%7CL%E2%80%99ALpina+%E8%A2%8B%E9%BC%A0%7CCROCODILE+%E9%B3%84%E9%B1%BC%E6%81%A4&bbn=2016156051&keywords=%E9%92%B1%E5%8C%85+%E7%94%B7&ie=UTF8&qid=1332250576&rnid=2016159051#/ref=sr_pg_12?rh=n%3A2016156051%2Ck%3A%E9%92%B1%E5%8C%85+%E7%94%B7%2Cp_4%3AMEXICAN+%E7%A8%BB%E8%8D%89%E4%BA%BA%7CSEPTWOLVES+%E4%B8%83%E5%8C%B9%E7%8B%BC%7CTUCANO+%E5%95%84%E6%9C%A8%E9%B8%9F%7CL%E2%80%99ALpina+%E8%A2%8B%E9%BC%A0%7CCROCODILE+%E9%B3%84%E9%B1%BC%E6%81%A4%2Cp_36%3A2038684051&page=12&bbn=2016156051&keywords=%E9%92%B1%E5%8C%85+%E7%94%B7&ie=UTF8&qid=1332250725
+天下枭雄
+http://item.taobao.com/item.htm?spm=a2106.m896.1000384.d12559.aHwRWh&id=16652721712&scm=1029.newlist-0.1.50016862&ppath=
+ 注册码:　UF1W2-DCXDK-48ENY-TDNGG-MG0V2
+                  YU3W2-6RY92-M89FP-KPQQT-X3RE2
+                  VA34H-DWWD6-08ELZ-3XQ7X-PAK90
+                  AF1R8-21X17-M8EHQ-QYZXX-WKKW8
+                  VU59U-D0E0L-48ENQ-G6WGG-PQUZF
+    VMware,Inc. (Virtual Machine ware）
+this与super的联系与区别；
+java的特性：继承，多态，封装；
+今天开了班会，感觉心情很糟糕，为什呢?或与应为我考的太差，或与今天下了很大的雨吧！貌似这些年的这些场合，当我很不如意的时候，就会下一个很坚定的目标，并且每次的确会坚定坚持下去，虽然大多数时候，却已成功，但是自我反思后的进步，是以每次的失败的痛苦做基础！我的做事速度快，但越来越感到相比别人效率低，必须改进这一点呀！
+晚上终于弄懂super（亦可访问父类其他方法）,this的功能了，开始学sacn了！
+static 定义的静态变量可以直接通过类名访问！静态函数一同，类型不可混合--2012.3.22
+异常处理:try,catch(Exception e,e.printStackTrace),finally,学习异常流--2012.3.25
+今天学界面，是三月最后的一天，心情不太好
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Point;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+    
+public class Test{
+    public static void main(String[]args){
+        JFrame f=new JFrame("一个窗口");
+        
+        //为标签添加图片《方法一》
+        File pic=new File("C:\\Users\\Administrator\\Desktop\\test.jpg");
+   
+        Icon icon=new ImageIcon(pic.toString());//Icon为接口，需要用ImageIcon()实例化，这是其中 的一个构造方法
+        JLabel lab=new JLabel("美女",icon,JLabel.CENTER);
+        Font font=new  Font("Serief", Font.BOLD, 22);
+        lab.setFont(font);
+        lab.setForeground(Color.RED);//设置标签前景色
+        
+        f.add(lab);
+        
+        //窗口设置大小
+        Dimension dim=new Dimension();
+        dim.setSize(400,208);
+        f.setSize(dim);
+        
+        //窗口设置位置
+        Point point=new Point(350,200);
+        f.setLocation(point);
+        f.setVisible(true);
+    }
+}2012.3.31
+，今天玩得很累，到洋人街，不过很值得，哥们义气重很重要！！晚上！不，直接早上了，学习吧！
+flash中没有char类型，用的是unicode字符集，另外使用空的大括号对作为new Object()函数的语法快捷方式--2012.4.4
+http://www.69fish.cn/Read/content.asp?id=123&num=251
+Math.floor 返回由参数 val 指定的数字或表达式的下限值。 下限值是小于等于指定数字或表达式的最接近的整数
+--2012.4.4
+u960,u880e,v788d,中兴V889D，索尼爱立信LT18i  LG LU6200
+,          华为Ascend G300C（C8818））HTC G7（Desire）HTC One V  htc desire w
+(--2012.4.8
+
+目标数组.indexOf（要查找的元素，查找的起始位置）
+
+目标数组.lastIndexOf（要查找的元素，查找的起始位置）
+trace("按索引从小到大查："+foo.indexOf("banana"));
+
+trace("按索引从大到小查："+foo.lastIndexOf("banana"));
+
+trace("从第三个元素开始，按索引从小到大查："+foo.indexOf("banana", 2));
+
+trace("从第五个元素开始，按索引从大到小查："+foo.lastIndexOf("banana", 4));
+
+● push方法：在数组尾部新增一个或多个元素。
+
+● unshift方法：在数组头部新增一个或多个元素。
+
+进阶知识
+
+push和unshift方法都有返回值。返回值是增加元素后的数组长度。
+
+常用用法如下。
+
+数组.push(元素);
+
+数组.push(元素1,元素2,元素3,…元素n);
+
+数组.unshift(元素);
+
+● pop方法用于将数组最后一个元素删除。
+
+● shift方法用于将数组第一个元素删除，剩余元素索引值自动减1。
+
+pop和shift不需要参数，使用格式为：
+
+数组.pop();
+
+数组.shift();
+进阶知识
+
+pop和shift都有返回值。返回值就是那个被删除的元素。
+从数组某位置开始，删除指定数目的元素，并插入一些新元素。这是splice的标准用法。用法格式如下。
+
+数组.splice(删除点的索引,要删除的元素数目,新元素1,新元素2，…新元素n);
+var a:RegExp=/kids/g;
+var S:String="world";
+var s:String=kids kis kids";
+s.match(a,S);
+var myPattern:RegExp = /Windows/g;
+
+var str:String = "Windows is a excellent operation system. I love Windows.";
+
+var repStr:String = "Linux";
+
+trace(str.match(myPattern, repStr));
+
+//输出：Linux is a excellent operation system. I love Linux.
+
+trace(str.match(myPattern));
+
+//输出：Windows,Windows
+AS3中所有显示对象都统一于DisplayObject类
+MovieClip是万能的，但缺点是一旦创建，就拥有了一大堆时间轴等属性，非常浪费资源， 有时候只将它作为空白容器。
+Sprite将是我们在AS3中接触最多的容器，可以把它理解成去掉时间轴的MovieClip。
+　位图是位的数组，它制订了像素矩阵中各像素的颜色。
+　　亦称为点阵图像或绘制图像，是由称作像素（图片元素）的单个点组成的。这些点可以进行不同的排列和染色以构成图
+15086626086
+已经可以随机选取图形及其位置，现在A：应该确定触发器，设置时间	B：使用循环控制图形
+翻
+
+2012.4.9
+
+http://list.taobao.com/market/sport2011a.htm?cat=50071852&promoted_service2=tag&isprepay=1&random=false&viewIndex=1&yp4p_page=0&commend=all&atype=b&style=grid&ppath=21541:42441&olu=yes&isnew=&mSelect=false&smc=1
+
+
+视屏
+http://v.pptv.com/show/ZyQgngZs3Bp9ib2M.html 
+http://item.vancl.com/0043276.html?ref=ch_xiuxianku_History#feedback
+https://shopping.vancl.com/shoppingcar/index###
+2012.4.16
+
+H 承压指数10分，你不在乎生活压力，什么都可以看开，你的人生永远在追求完美和理想，你的苦干精神无人可以比较。你的快乐是单纯而自然，能时时知足又懂得不断去追求。 你不需要别人帮助解决生活压力，但需要别人指导解决生活难题，多交一些有智慧和远见的朋友
+
+http://tieba.baidu.com/p/1533868914?see_lz=1
+
+http://tieba.baidu.com/f?kw=%C0%EE%D2%E3&pn=250
+
+2012.4.18
+#include<stdio.h> 
+#define N 10000 
+int main() 
+{ 
+int i; 
+for(i=11;i<N;i++) 
+{ 
+if((i%6==5)&&(i%5==1)&&(i%7==4)&&(i%11==10)) 
+printf("满足条件的士兵数： %d\n",i); 
+} 
+
+
+第二题
+1:   char *w
+2:   !(w[j]>='0'&&w[j]<='9')
+3: w[i]='\0'
+
+
+
+
+错误	1	error C2064: 项不会计算为接受 1 个参数的函数	d:\c++\rand\rand\rand1.cpp	32	1	Rand
+
+
+
+改错题
+*k=*p
+m=1;
+y>1改成y>0
+--2012.4.20
+示波器的调整和使用  物理实验室S117  第10周星期四9 -10节  田贻丽 
+电表的改装和校正  物理实验中心S104  第10周星期五7 - 8节  张雪娥 
+请大家在上课之前要预习！！！
+至于专业概论我争取推迟！！648734
+中国电信密码   ，
+http://tieba.baidu.com/p/1544201129?pn=5
+648388464
+--20124.24
+implements 接口名字
+ImageIcon 图片类名
+extends继承类名--2012.4.25
+
+http://www.cjsdn.net/Doc/JDK60/    Java api中文版在线查看地址
+
+
+
+2401/2402高数 9-11；00
+
+2117 物理 3-5;00
+3506 英语 19:00-21:05   
+1621705
+13340220703@cqup
+
+
+android开发范例大全
+
+
+
+如何辨别翻修（翻新）机？
+　　1、仔细看屏幕内有无印痕,数据线,耳机孔,扬声器孔,挂带孔是否有灰尘。
+　　2、仔细看机身电池卡锁处有无拨痕,上下盖旋轴处有无旋印,上盖处两凸点有无压痕。
+　　3、仔细检查WAP和语音功能及通话纪录信息功能中有无记录。
+　　4、外壳就靠对比了(与证明是好的机器去比亮度,均匀度,色调,颗粒度...)。
+　　5、闻气味,新机器有檀香,不同与一般的清洁剂和香水味.机身不能有粘粘的蜡和油(有的话被JS美容了)。
+　　6、仔细检查SIM卡接触点,机身电池接触点有无磨痕(区别接触点其余部分)。
+　　7、看外壳的接缝处间隙是否均匀而且在1MM以下,有无撬痕,上盖内屏幕下两封点有无挑痕。
+　　8、与新机器对比按键的弹性和内外显示屏的亮度。
+　　9、仔细看机身的固定锣钉有无旋印,涂漆涂墨(可以用放大镜),商标有无撬痕
+
+　　1、上认证网www.tenaa.com.cn，输入进网许可证编号与扰码及机身串号等信息进行查询。 
+
+　　2、拨打中心电话：010－82058767、010－82050313(节假日休息)。 
+
+　　3、发送短信查询：输入RW许可证编号扰码机身串号到9500。 
+
+　　(注：许可证编号－可用A代替；机身串号只输入数字部分)
+
+MRX3F-47B9T-2487J-KWKMF-RPWBY MRX3F-47B9T-2487J-KWKMF-RPWBY 
+
+《云计算：深刻改变未来》
+
+《物联网导论》
+bb.sdo.com
+*#*#4636#*#*
+
+
+05-Model Test 5.mp3;02-Model Test 2.mp3;04-Model Test 4.mp3;03-Model Test 3.mp3
+
+
+
+今天到初中同学家里去玩，走了so many山路，感觉回到重庆了，加上烈日，着实累了一天，不过却看见昔日许多同学，怪亲切的！
+《一些单词》
+vanish ['v?ni?] vi. 消失，不见了，绝迹
+vt. 消失
+transmit [tr?nz'mit] vt. 传输，传送，代代相传，传达
+vi. (以无线电或有线电的方式)发送信号
+tender ['tend?] adj. 温柔的，嫩的，脆弱的 ，亲切的，敏感的，未成熟的，痛的，（船）易倾斜的
+v. 提供，投标
+v. （使）变柔软
+n. 提出，投标，支付，偿还
+n. 照管人，补给船，煤水车
+nuisance ['nju:sns] n. 讨厌的东西，讨厌的人，伤害
+liberal ['lib?r?l] adj. 慷慨的，大方的，自由主义的
+n. 自由主义者，开明的人 
+Liberal
+n. 自由党人
+好记星 V11
+
+Prime素数
+
+错误	1	error C2064: 项不会计算为接受 1 个参数的函数	d:\c++\rand\rand\rand1.cpp	32	1	Rand（）(srand(time) 只能有一个参数，作用是使得rand()产生的随机数不是一样的1)
+jsp中40??和80？？的错误：404（文件路径错误），4**表示客户端请求错误;     HTTP Status 405 - HTTP method GET is not supported by this URL 
+出现错误的原因： 
+  1，继承HttpServlet的Servlet没有覆写对应请求和响应的处理方法即：doGet或 
+      doPost等方法；默认调用了父类的doGet或doPost等方法； 
+  2， 父类HttpServlet的doGet()或doPost()方法覆盖了你重写的doGet或doPost等 
+      方法； 
+      只要出现以上的情况之一，父类HttpServlet的doGet或doPost等方法的默认实现是 
+      返回状态代码为405的HTTP错误表示：对于指定资源的请求方法不被允许。 
+解决方法： 
+  1，子类覆写父类的doGet或doPost等方法； 
+  2，在你的Servlert中覆写doGet或doPost等方法来处理请求和响应，不要调用父类 
+     HttpServlet的doGet() 和 doPost()方法，即： 
+     将doGet()方法中的 super.doGet(req, resp); 
+             改为：this.doPost(req , resp) ; 可以解决问题。
+；500表示服务器错误，程序运行错误
+ResultSet接口在 javax.servlet.jsp.jstl.sql.Result
+Resultset.getXXX表示得到冒种字型extends HttpServlet
+文件上传需要进行转使换用2进制enctype="multipart/form-data",存储文件使用smartupload对象initialize初始化,upload准备,save保存，不能使用request直接得到传递的参数值，此类位于org.lxh.smart.*不能加载
+servlet程序不能运行package boxcal;
+文件【批量上传
+smart操作
+
+跳转界面可以使用jsp:forward（自动判断跳转），href点击判断跳转
+TK8TP-9JN6P-7X7WW-RFFTV-B7QPF
+Somebody That I Used To Know
+这个方法获得的requestDispatcher   对象中的path必须以“/”开头，代表应用程序根目录，而第一中方法获得的requestDispatcher   对象则没有这种限制 
+C:\Program Files\Java\jre7
+配置映射路径		<Context path="/dirweb" docBase="D:\jspworkplace\web\WebRoot" />
+MIME的英文全称是"Multipurpose Internet Mail Extensions" 多功能Internet 邮件扩充服务，它是一种多用途网际邮件扩充协议，在1992年最早应用于电子邮件系统，但后来也应用到浏览器。服务器会将它们发送的多媒体数据的类型告诉浏览器，而通知手段就是说明该多媒体数据的MIME类型，从而让浏览器知道接收到的信息哪些是MP3文件，哪些是Shockwave文件等等。服务器将MIME标志符放入传送的数据中来告诉浏览器使用哪种插件读取相关文件
+cookie是用来保存用户与服务器之间的交互信息，保存在服务器中，但是用户名保存在客户端的session上，session（服务器响应客户端发送体积
+较小的纯文本信息）
+配置虚拟路径
+tomcat下root下web-inf/文件-copy,配置server文件，
+<Context path="/虚拟" docBase="绝对地址" />
+修改web.xml下listing false=true
+配置路径
+<servlet>
+    <servlet-name>UserInfoServelet</servlet-name>
+    <servlet-class>com.java.servlet.UserInfoServelet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>UserInfoServelet</servlet-name>
+    <url-pattern>/UserInfoServelet</url-pattern>
+  </servlet-mapping>
+
+session.setcookie()时间单位是秒
+1.throws 用于抛出方法层次的异常，
+并且直接由些方法调用异常处理类来处理该异常，
+所以它常用在方法的后面。比如
+ public static void main(String[] args)  throws   SQLException
+
+2.throw 用于方法块里面的代码，比throws的层次要低，比如try...catch ....语句块，表示它抛出异常，
+但它不会处理它，
+而是由方法块的throws Exception来调用异常处理类来处理。
+thread有两种方法继承(thread)和实现接口（runnable）但都要重写run方法
+
+Synchronized加锁关键词，里面的代码需等其他调用相同代码完成后才开始执行
+
+　　实例变量不正确的使用是造成Servlet线程不安全的主要原因。下面针对该问题给出了三种解决方案并对方案的选取给出了一些参考性的建议。
+
+　　1、实现 SingleThreadModel 接口
+
+　　该接口指定了系统如何处理对同一个Servlet的调用。如果一个Servlet被这个接口指定,那么在这个Servlet中的service方法将不会有两个线程被同时执行，当然也就不存在线程安全的问题。这种方法只要将前面的Concurrent Test类的类头定义更改为：
+
+　　Public class Concurrent Test extends HttpServlet implements SingleThreadModel {
+
+　　…………
+
+　　}
+
+　　2、同步对共享数据的操作
+
+　　使用synchronized 关键字能保证一次只有一个线程可以访问被保护的区段，在本论文中的Servlet可以通过同步块操作来保证线程的安全。同步后的代码如下：
+
+　　…………
+
+　　Public class Concurrent Test extends HttpServlet { …………
+
+　　Username = request.getParameter ("username");
+
+　　Synchronized (this){
+
+　　Output = response.getWriter ();
+
+　　Try {
+
+　　Thread. Sleep (5000);
+
+　　} Catch (Interrupted Exception e){}
+
+　　output.println("用户名:"+Username+"
+
+　　");
+
+　　}
+
+　　}
+
+　　}
+
+　　3、避免使用实例变量
+
+　　本实例中的线程安全问题是由实例变量造成的，只要在Servlet里面的任何方法里面都不使用实例变量，那么该Servlet就是线程安全的。
+
+　　修正上面的Servlet代码，将实例变量改为局部变量实现同样的功能，代码如下：
+
+　　……
+
+　　Public class Concurrent Test extends HttpServlet {public void service (HttpServletRequest request, HttpServletResponse
+
+　　Response) throws ServletException, IOException {
+
+　　Print Writer output;
+
+　　String username;
+
+　　Response.setContentType ("text/html; charset=gb2312");
+
+　　……
+
+　　}
+
+　　}
+
+线程安全　　对上面的三种方法进行测试，可以表明用它们都能设计出线程安全的Servlet程序。但是，如果一个Servlet实现了 SingleThreadModel接口，Servlet引擎将为每个新的请求创建一个单独的Servlet实例，这将引起大量的系统开销。 SingleThreadModel在Servlet2.4中已不再提倡使用；同样如果在程序中使用同步来保护要使用的共享的数据，也会使系统的性能大大下降。这是因为被同步的代码块在同一时刻只能有一个线程执行它，使得其同时处理客户请求的吞吐量降低，而且很多客户处于阻塞状态。另外为保证主存内容和线程的工作内存中的数据的一致性，要频繁地刷新缓存,这也会大大地影响系统的性能。所以在实际的开发中也应避免或最小化 Servlet 中的同步代码；在Serlet中避免使用实例变量是保证Servlet线程安全的最佳选择。从Java 内存模型也可以知道，方法中的临时变量是在栈上分配空间，而且每个线程都有自己私有的栈空间，所以它们不会影响线程的安全。
+a)         100-199
+都是信息性的，标示客户应该采取的其他动作。
+
+b)        200-299
+表示请求成功。
+
+c)        300-399
+用于那些已经移走的文件，常常包括Location报头，指出新的地址。
+
+d)        400-499
+表明客户引发的错误。
+
+e)         500-599
+表示由服务器引发的错误。
+使用resp.setHeader()可以限定时间加载到新网址上去
+
+response.setHeader 是用来设置返回页面的头 meta 信息,
+
+
+使用resp.sendRedirect(项目路径)可变换地址，RequestDispacher.forward("/加文件名即可")不变换地址
+
+中文转换
+try {
+			byte bytechinese[]=s.getBytes("ISO-8859-1");
+			s=new String(bytechinese);
+			return s;
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		  return("errors");
+		}
+
+应用系统组态文件不会，jss没看
+电子布告栏
+
+servlet分为简单servlet，监听，过滤servlet
+
+过滤servlet使用接口filter
+接口 Iterator boolean hasNext() 
+          如果仍有元素可以迭代，则返回 true。 
+ E next() 
+          返回迭代的下一个元素。 
+ void remove() 
+          从迭代器指向的 collection 中移除迭代器返回的最后一个元素（可选操作）。 
+监听器servlet-listener
+lomboz-emf-gef-jem-3.1M6.zip
+表达式      
+void class::function(){}  
+ YAOGE.TK（yaoge22two?）;YAOGE1.TK(yaoge yaoge22two?)
+
+
+
+
+ 抽象与封装，继承与多态
+ 集合关系：一一对应，继而封装对一
+ 1.学的内容：
+ 2.例子：
+ 3.总结：
+ 4.点：
+ A:为什么要整洁代码:为此付出代价的公司
+我们被混乱的代码烦恼，生产力下降，看不懂，无层次感
+我们不专业，需要需要努力学习
+写代码是一种艺术
+我们在写的时候10:1是在写：读
+ B:什么叫整洁代码：
+ 让代码改无可改，而且实现所有的功能
+ 效率与稳定性，好的代码只做好一件事
+ 语言是死板不变的，是程序员使其变得简单
+达到的要求：1能通过所有测试 2没有重复代码 3.体现系统中全部的设计理念 4.包括尽量少的实体代码（类，方法，函数）
+看得很爽
+C:怎么做到这一点：
+1.有意义的命名规则，名副其实：直接说明它的作用，无需注释int price_apple,int price_meat
+public class Add{
+	public static void main(String[] args){
+		Add add = new Add();
+		int add_start=21;
+		int add_end=12;
+		add.add_int(add_start,add_end);
+	}
+}
+public static int add_int(int add_start,int add_end){
+	int temp;
+	temp=add_start;
+	add_start=add_end;
+	add_end=temp;
+}
+有意义的区分，具有可读性，可搜索，不用代码命名 ，一对一，避免同义,短名能够表达清楚的就尽量使用，                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+2.涉及函数，应该精炼
+拆分函数就应该是在抽象的理解和前提下进行一系列的步骤，，就像是将其分成一个个基本单元，位于同一个抽象层次
+编写函数式遵行向下规则，
+switch（if else while）标记函数里面参数不含布尔值，明白只做一件事，多元函数尽量拆分，否则封装使用类
+避免使用输出函数，切莫重复代码·，
+3.好的注释也是一种失败
+在确认跟好的办法之前 注释代码是一种失败，用代码表达所需要的目的，解释行为，警告一些代码出现的后果，误导性注释，修改代码
+括号后面的注释可改写为短小的函数，不能讲代码直接注释掉，误导别人
+注释：有联系，精简
+4.讲究格式：
+有哪些格式：垂直格式，剪刀原则，概念相关放在一起，紧密相关
+为什么要讲究：基本单个文件大达400行
+怎么讲究：使用空白行，补齐空格（结构化表达式意思），水平对齐，缩进
+5，对象与数据结构区分开来
+对象执行其行为，方法（添加新对象，而没有修改其数据，行为），隐藏数据结构(添加新行为)
+新的数据类型使用对象，新的属性行为使用数据类型和过程
+6，精简的错误处理（异常处理而非返回错误代码）
+扩大对错误的处理力度，节省精力
+1作用：将错误代码分块，代码依旧执行，貌似正常，但可以对抛出的异常进行对点处理
+2可以自己写出异常类，从而辨别
+3，不传递null值，禁止此做法，经常出现异常
+215398457　yaoge22two?
+帝国时代3之亚洲王朝 CD-KEY 序列号
+CD-KEY:KDJMG-PF9JB-BYQ3V-H697Q-CWGHC
+飞信号码： 145946439 
+sanrenxing-601  yaoge22 江边流客  您要注册的免费域名：sanrenxing-601.xicp.cn
+222.182.97.207
+新浪邮箱yaoge_num@sina.cn yaoge_num
+邮件，分页，导出excel，搜索引擎
+668244应用ID:
+
+谷歌邮箱：yaoge22two@gmail.com   yaoge22two?
+
+C1cAF4P7kQFDKVqOBjICCWeOAPI Key:
+
+M7vZzrCAntmfdHutrUni4V5vtU2dMCcy	设置背景，音乐，在线搜索
+恭喜您，系统已经安装成功！
+请重启TOMCAT服务。只有重启TOMCAT服务之后，安装才能生效。
+后台登录地址“网站根路径/jeeadmin/jeecms/index.do”
+后台管理员admin，密码password。
+jsp->servlet->java->servlet->jsp(href)其中能够获取xml文件，截取地址，但是超链接访问无效，但是把地址输入到浏览器地址栏可以[img=http://img.my.csdn.net/uploads/201304/22/1366590933_1796.png][/img]
+jsp访问百度音乐接口，能够直接下载，但是失效
+CD-KEY:KDJMG-PF9JB-BYQ3V-H697Q-CWGHC
+path表示提交路径，input表示错误显示路径
+Structs中拦截器有问题。
+hebernate中hql语句中设定参数是从0开始
+有道翻译API申请成功
+API key：1586598840
+keyfrom：jiashuyouyue
+http://fanyi.youdao.com/openapi.do?keyfrom=<keyfrom>&key=<key>&type=data&doctype=<doctype>&version=1.1&q=要翻译的文本
+http://fanyi.youdao.com/openapi.do?keyfrom=jiashuyouyue&key=1586598840&type=data&doctype=xml&version=1.1&q=%E4%BD%A0%E5%A5%BD
+音乐管理播放器的位置，图书展现的方式使用div,搜索的美化，

@@ -1,0 +1,162 @@
+@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+
+
+*{
+	margin:0px;
+	padding:0px;
+}
+
+#container{background:url(images/g.jpg);
+	width:1024px;
+	height:800px;
+	margin:auto;
+	
+}
+#navi{
+	
+	float:left;
+	
+	margin-top:16px;
+	width:1022px;
+	height:26px;
+	}
+#navi .l{
+	font-weight:bold;
+	float:left;
+	margin-left:75px;
+	margin-top:5px;
+	font-size:14px;
+	}
+#navi .l a{
+	text-decoration:none;
+	color:#EC750D;
+	}
+#navi .r{
+	
+	float:left;
+	margin-left:420px;
+	margin-top:5px;
+	font-size:14px;
+	}
+#navi .r a{
+	color:#F00;
+	}*/
+#kuang{
+	padding-top:10px;
+	background:#F6F6F6;
+	float:left;
+	border:#DBDBDB 1px solid;
+	margin-top:20px;
+	margin-left:40px;
+	width:930px;
+	height:520px;
+	}
+
+#kuang_left{
+	
+	background:#F6F6F6;
+	float:left;
+	border:#DBDBDB 1px solid;
+	margin-top:20px;
+	margin-left:20px;
+	width:270px;
+	height:460px;
+	}
+#kuang_left_manger{
+	font-size:14px;
+	
+	
+	float:left;
+	/*border:#DBDBDB 1px solid;*/
+	margin-top:20px;
+	margin-left:60px;
+	width:100px;
+	height:160px;
+	}
+#kuang_left_manger a{
+	font-size:18px;
+	line-height:20px;
+	font-weight:bold;
+	color:#360;
+	}
+#kuang_left h1{
+	
+	
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+	color:#C09;
+	margin-top:20px;
+	margin-left:20px;
+	
+	}
+#kuang_left p{
+	
+	
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+	color:#C09;
+	margin-top:30px;
+	margin-left:60px;
+	
+	}
+#kuang_right{
+	font-size:16px;
+	display:block;
+	line-height:40px;
+
+	font-weight:bold;
+	color:#C09;
+	
+	float:left;
+	/*border:#DBDBDB 2px solid;*/
+	margin-top:20px;
+	margin-left:30px;
+	width:540px;
+	height:460px;
+	}
+#kuang_right_one{
+	
+	background:url(images/hhh.jpg);
+	float:left;
+	border:#DBDBDB 2px solid;
+	margin-top:20px;
+	margin-left:30px;
+	width:450px;
+	height:40px;
+	}
+#kuang_right_two{
+	
+	background:url(images/hhh.jpg);
+	float:left;
+	border:#DBDBDB 2px solid;
+	margin-top:30px;
+	margin-left:30px;
+	width:450px;
+	height:40px;
+	}
+#kuang_right_three{
+	
+	background:url(images/hhh.jpg);
+	float:left;
+	border:#DBDBDB 2px solid;
+	margin-top:30px;
+	margin-left:30px;
+	width:450px;
+	height:40px;
+	}
+#kuang_right_four{
+	
+	background:url(images/hhh.jpg);
+	float:left;
+	border:#DBDBDB 2px solid;
+	margin-top:30px;
+	margin-left:30px;
+	width:450px;
+	height:40px;
+	}

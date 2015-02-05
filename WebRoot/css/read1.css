@@ -1,0 +1,65 @@
+
+@charset "utf-8";
+/* CSS Document */
+
+
+*{
+	margin:0px;
+	padding:0px;
+}
+
+#container{
+	width:1024px;
+	height:1400px;
+	margin:auto;
+	
+}
+
+
+#content{
+
+	width:800px;
+	height:auto;
+	margin:auto;
+	
+}
+
+/*background:url(../images/read1.jpg);*/
+#kuang{
+	padding-top:10px;
+	
+	float:left;
+	border:#DBDBDB 1px solid;
+	margin-top:15px;
+	margin-left:60px;
+	width:880px;
+	height:1060px;
+	}
+#kuang{
+	padding-top:20px;
+	padding-left:50px;
+	
+	}
+#kuang p{
+	
+	font-size:16px;
+	font-weight:bold;
+	color:#690;
+	}
+#kuang input{
+	
+	font-size:15px;
+
+	}
+#kuang_content{
+	padding-top:10px;
+	
+	float:left;
+	border:#DBDBDB 5px solid;
+	margin-top:10px;
+	margin-left:5px;
+	width:830px;
+	height:700px;
+	}
+	
+

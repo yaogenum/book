@@ -1,0 +1,57 @@
+
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0px;
+	padding:0px;
+}
+
+#container{background:url(images/g.jpg);
+	width:1024px;
+	height:1120px;
+	margin:auto;
+	
+}
+
+#kuang{
+	padding-top:10px;
+	background:#F6F6F6;
+	float:left;
+	border:#DBDBDB 1px solid;
+	margin-top:20px;
+	margin-left:100px;
+	width:480px;
+	height:770px;
+	}
+#kuang form{
+	float:left;
+	margin-left:80px;
+	margin-top:25px;
+	}
+#kuang form .l{
+	float:left;
+	margin-left:50px;
+	margin-top:0px;
+	}
+
+
+#kuang hr {
+	float:left;
+	width:400px;
+	margin-left:40px;
+	margin-top:30px;
+	border:1px dotted #CCC;
+	}
+#kuang p a {
+	text-decoration:none;
+	font-size:14px;
+	float:left;
+	width:200px;
+	margin-left:240px;
+	margin-top:25px;
+	color:#F00;
+	}
+@charset "utf-8";
+/* CSS Document */
+

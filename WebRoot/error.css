@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0px;
+	padding:0px;
+}
+#content{
+	float:left;
+	width:460px;
+	height:60px;
+	margin-left:400px;
+	margin-top:10px;
+	
+} 
+#content p{
+	font-size:18px;
+	font-family:"Courier New", Courier, monospace;
+	color:#077548;
+	font-weight:bold;
+} 

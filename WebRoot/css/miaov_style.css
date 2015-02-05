@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#show1 ul li { list-style: none; }
+#show1 { background:url(../images/beijing.jpg);}
+
+#show1 { width: 646px; height:205px; /*border: 1px solid #ccc;*/ margin: 0px auto 0; overflow:hidden; }
+#show1 ul { width: 646px; height: 205px; }
+#show1 ul li { width: 62px; height: 205px; float: left; position: relative; overflow:hidden; }
+.active { width: 540px; }
+#show1 ul span { width: 65px; height: 200px; padding-top: 80px; border-right: 1px solid #fff; position: absolute; top: 0; right: 0; color: #fff; font-size: 18px; font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;text-align: center; font-weight:bold;;cursor: pointer;background:url(../images/shuji5.jpg); }
+#one{ width: 360px; height: 205px; background:url(../images/beijing.jpg);}
+#one p{line-height:30px;color: #000; font-size: 15px; margin-left:20px; }
+
+.bg0 { background: #00FFCC; }
+.bg1 { background: #636363; }
+.bg2 { background: #3d7fbb; }
+.bg3 { background: #5ca716; }
+.bg4 { background: #f28b24; }
+.bg5 { background: #7c0070; }
+.bg6 { background: #7c0070; }

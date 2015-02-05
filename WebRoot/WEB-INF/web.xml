@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor 
+	license agreements. See the NOTICE file distributed with this work for additional 
+	information regarding copyright ownership. The ASF licenses this file to 
+	You under the Apache License, Version 2.0 (the "License"); you may not use 
+	this file except in compliance with the License. You may obtain a copy of 
+	the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required 
+	by applicable law or agreed to in writing, software distributed under the 
+	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
+	OF ANY KIND, either express or implied. See the License for the specific 
+	language governing permissions and limitations under the License. <filter> 
+	<filter-name>struts2</filter-name> <filter-class> org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter 
+	</filter-class> </filter> <filter-mapping> <filter-name>struts2</filter-name> 
+	<url-pattern>*.action</url-pattern> </filter-mapping> -->
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0" metadata-complete="true">
+
+	<display-name>Welcome to Tomcat</display-name>
+	<description>
+     Welcome to Tomcat
+	</description>
+
+	
+
+	<filter>
+		<filter-name>GB_encoding</filter-name>
+		<filter-class>filter.GB_encoding</filter-class>
+		<init-param>
+			<param-name>charSet</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>GB_encoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	
+	<filter>
+		<filter-name>Indicate</filter-name>
+		<filter-class>filter.Indicate</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>Indicate</filter-name>
+		<url-pattern>/personal/*</url-pattern>
+	</filter-mapping>
+	
+
+	<filter>
+		<filter-name>Indicates</filter-name>
+		<filter-class>filter.Indicate</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>Indicates</filter-name>
+		<url-pattern>/download/*</url-pattern>
+	</filter-mapping>
+	
+	
+	
+	
+	<!--
+	<filter>
+		<filter-name>Admins</filter-name>
+		<filter-class>filter.Admin</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>Admins</filter-name>
+		<url-pattern>/admin/*</url-pattern>
+	</filter-mapping>
+	-->
+	
+	<filter>
+		<filter-name>Indicates_file</filter-name>
+		<filter-class>filter.Indicate</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>Indicates_file</filter-name>
+		<url-pattern>/save_files/*</url-pattern>
+	</filter-mapping>
+	
+	<!--  
+	<filter>
+		<filter-name>Indicates_music</filter-name>
+		<filter-class>filter.Indicate</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>Indicates_music</filter-name>
+		<url-pattern>/music/*</url-pattern>
+	</filter-mapping>
+	
+	-->
+	
+	<filter>
+		<filter-name>Indicates_luntan</filter-name>
+		<filter-class>filter.Indicate</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>Indicates_luntan</filter-name>
+		<url-pattern>/jsp/*</url-pattern>
+	</filter-mapping>
+	
+	
+	<filter>
+		<filter-name>Indicates_musicxml</filter-name>
+		<filter-class>filter.Indicate</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>Indicates_musicxml</filter-name>
+		<url-pattern>/music_xml/*</url-pattern>
+	</filter-mapping>
+
+
+
+
+
+
+
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Users_indicate</servlet-name>
+		<servlet-class>beasns.Users_indicate</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Admin_indicate</servlet-name>
+		<servlet-class>servlet.Admin_indicate</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Mysql_indicate</servlet-name>
+		<servlet-class>servlet.Mysql_indicate</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Test</servlet-name>
+		<servlet-class>servlet.Test</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Iidicate</servlet-name>
+		<servlet-class>servlet.Iidicate</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Indicate</servlet-name>
+		<servlet-class>servlet.Indicate</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>LoginForm</servlet-name>
+		<servlet-class>servlet.LoginForm</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>servlet.Register</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Lost_password</servlet-name>
+		<servlet-class>mail.Lost_password</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Send_mail</servlet-name>
+		<servlet-class>servlet.Send_mail</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Upload</servlet-name>
+		<servlet-class>servlet.Upload</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Download</servlet-name>
+		<servlet-class>servlet.Download</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Href_download</servlet-name>
+		<servlet-class>servlet.Href_download</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Href_read</servlet-name>
+		<servlet-class>servlet.Href_read</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>test</servlet-name>
+		<servlet-class>servlet.test</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Book_content</servlet-name>
+		<servlet-class>servlet.Book_content</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>text</servlet-name>
+		<servlet-class>servlet.text</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Books_pingjia</servlet-name>
+		<servlet-class>servlet.Books_pingjia</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Add_tag</servlet-name>
+		<servlet-class>servlet.Add_tag</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Firstname_indicate</servlet-name>
+		<servlet-class>servlet.Firstname_indicate</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Indicate_password</servlet-name>
+		<servlet-class>servlet.Indicate_password</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Update_users</servlet-name>
+		<servlet-class>servlet.Update_users</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Add_amount</servlet-name>
+		<servlet-class>servlet.Add_amount</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Delete_tag</servlet-name>
+		<servlet-class>servlet.Delete_tag</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>MusicServlet</servlet-name>
+		<servlet-class>servlet.MusicServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Yanzhen</servlet-name>
+		<servlet-class>servlet.Yanzhen</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Vip_arrange</servlet-name>
+		<servlet-class>servlet.Vip_arrange</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Tuijian</servlet-name>
+		<servlet-class>servlet.Tuijian</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Save_records</servlet-name>
+		<servlet-class>servlet.Save_records</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Read_times</servlet-name>
+		<servlet-class>servlet.Read_times</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Arrange_music</servlet-name>
+		<servlet-class>servlet.Arrange_music</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Set_music</servlet-name>
+		<servlet-class>servlet.Set_music</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Users_arrange</servlet-name>
+		<servlet-class>admin.Users_arrange</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>All_users</servlet-name>
+		<servlet-class>admin.All_users</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>All_books</servlet-name>
+		<servlet-class>admin.All_books</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Books_arrange</servlet-name>
+		<servlet-class>admin.Books_arrange</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>All_music</servlet-name>
+		<servlet-class>admin.All_music</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Music_arrange</servlet-name>
+		<servlet-class>admin.Music_arrange</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Infor_book</servlet-name>
+		<servlet-class>admin.Infor_book</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Pic_book</servlet-name>
+		<servlet-class>admin.Pic_book</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Infor</servlet-name>
+		<servlet-class>admin.Infor</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>Jusion</servlet-name>
+		<servlet-class>admin.Jusion</servlet-class>
+	</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>sdsd</servlet-name>
+    <servlet-class>servlet.sdsd</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DataTransmission</servlet-name>
+    <servlet-class>com.servlet.DataTransmission</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddPost</servlet-name>
+    <servlet-class>com.servlet.AddPost</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Top_read</servlet-name>
+    <servlet-class>servlet.Top_read</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Shouye</servlet-name>
+    <servlet-class>servlet.Shouye</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Shouye_top</servlet-name>
+    <servlet-class>servlet.Shouye_top</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>dongtai</servlet-name>
+    <servlet-class>servlet.dongtai</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Read_ready</servlet-name>
+    <servlet-class>servlet.Read_ready</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Ready_download</servlet-name>
+    <servlet-class>servlet.Ready_download</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Need_for</servlet-name>
+    <servlet-class>admin.Need_for</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Top_ready</servlet-name>
+    <servlet-class>servlet.Top_ready</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Tuijian_fen</servlet-name>
+    <servlet-class>servlet.Tuijian_fen</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Get_fenlei</servlet-name>
+    <servlet-class>servlet.Get_fenlei</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CommitTable</servlet-name>
+    <servlet-class>servlet.commit.CommitTable</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>Users_indicate</servlet-name>
+		<url-pattern>/servlet/Users_indicate</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Admin_indicate</servlet-name>
+		<url-pattern>/servlet/Admin_indicate</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Mysql_indicate</servlet-name>
+		<url-pattern>/servlet/Mysql_indicate</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Test</servlet-name>
+		<url-pattern>/servlet/Test</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/servlet/LoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Iidicate</servlet-name>
+		<url-pattern>/servlet/Iidicate</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Indicate</servlet-name>
+		<url-pattern>/servlet/Indicate</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginForm</servlet-name>
+		<url-pattern>/servlet/LoginForm</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/servlet/Register</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Lost_password</servlet-name>
+		<url-pattern>/servlet/Lost_password</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Send_mail</servlet-name>
+		<url-pattern>/servlet/Send_mail</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Upload</servlet-name>
+		<url-pattern>/servlet/Upload</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Download</servlet-name>
+		<url-pattern>/servlet/Download</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Href_download</servlet-name>
+		<url-pattern>/servlet/Href_download</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Href_read</servlet-name>
+		<url-pattern>/servlet/Href_read</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>test</servlet-name>
+		<url-pattern>/servlet/test</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Book_content</servlet-name>
+		<url-pattern>/servlet/Book_content</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>text</servlet-name>
+		<url-pattern>/servlet/text</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Books_pingjia</servlet-name>
+		<url-pattern>/servlet/Books_pingjia</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Add_tag</servlet-name>
+		<url-pattern>/servlet/Add_tag</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Firstname_indicate</servlet-name>
+		<url-pattern>/servlet/Firstname_indicate</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Indicate_password</servlet-name>
+		<url-pattern>/servlet/Indicate_password</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Update_users</servlet-name>
+		<url-pattern>/servlet/Update_users</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Add_amount</servlet-name>
+		<url-pattern>/servlet/Add_amount</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Delete_tag</servlet-name>
+		<url-pattern>/servlet/Delete_tag</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MusicServlet</servlet-name>
+		<url-pattern>/servlet/MusicServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Yanzhen</servlet-name>
+		<url-pattern>/servlet/Yanzhen</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Vip_arrange</servlet-name>
+		<url-pattern>/servlet/Vip_arrange</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Tuijian</servlet-name>
+		<url-pattern>/servlet/Tuijian</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Save_records</servlet-name>
+		<url-pattern>/servlet/Save_records</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Read_times</servlet-name>
+		<url-pattern>/servlet/Read_times</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Arrange_music</servlet-name>
+		<url-pattern>/servlet/Arrange_music</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Set_music</servlet-name>
+		<url-pattern>/servlet/Set_music</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Users_arrange</servlet-name>
+		<url-pattern>/servlet/Users_arrange</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>All_users</servlet-name>
+		<url-pattern>/servlet/All_users</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>All_books</servlet-name>
+		<url-pattern>/servlet/All_books</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Books_arrange</servlet-name>
+		<url-pattern>/servlet/Books_arrange</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>All_music</servlet-name>
+		<url-pattern>/servlet/All_music</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Music_arrange</servlet-name>
+		<url-pattern>/servlet/Music_arrange</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Infor_book</servlet-name>
+		<url-pattern>/servlet/Infor_book</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Pic_book</servlet-name>
+		<url-pattern>/servlet/Pic_book</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Infor</servlet-name>
+		<url-pattern>/servlet/Infor</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Jusion</servlet-name>
+		<url-pattern>/servlet/Jusion</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sdsd</servlet-name>
+    <url-pattern>/servlet/sdsd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DataTransmission</servlet-name>
+    <url-pattern>/DataTransmission</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddPost</servlet-name>
+    <url-pattern>/AddPost</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Top_read</servlet-name>
+    <url-pattern>/servlet/Top_read</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Shouye</servlet-name>
+    <url-pattern>/servlet/Shouye</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Shouye_top</servlet-name>
+    <url-pattern>/servlet/Shouye_top</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>dongtai</servlet-name>
+    <url-pattern>/servlet/dongtai</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Read_ready</servlet-name>
+    <url-pattern>/servlet/Read_ready</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Ready_download</servlet-name>
+    <url-pattern>/servlet/Ready_download</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Need_for</servlet-name>
+    <url-pattern>/servlet/Need_for</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Top_ready</servlet-name>
+    <url-pattern>/servlet/Top_ready</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Tuijian_fen</servlet-name>
+    <url-pattern>/servlet/Tuijian_fen</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Get_fenlei</servlet-name>
+    <url-pattern>/servlet/Get_fenlei</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CommitTable</servlet-name>
+    <url-pattern>/servlet/CommitTable</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>shouye.jsp</welcome-file>
+  </welcome-file-list>
+  
+</web-app>

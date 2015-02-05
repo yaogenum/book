@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0px;
+	padding:0px;
+}
+
+#container{background:url(images/g.jpg);
+	width:1024px;
+	height:870px;
+	margin:auto;
+	
+}
+#header{
+	float:left;
+	width:1024px;
+	height:220px;
+	background:#508A00;
+} 
+#header_denglu{
+	font-size:13px;
+	color:#FFF;
+	float:left;
+	margin-left:720px;
+	width:424px;
+	height:24px;
+
+	display: block;
+	line-height:24px;
+}
+#header_denglu a{
+	color:#FCBE20;
+	
+	text-decoration:none;
+	font-size:12px;
+	}
+#header_logo{
+	float:left;
+	width:1024px;
+	height:146px;
+	background:url(images/11.jpg);
+}
+#header_logo_sou{
+/*border:#000 1px solid;*/
+	float:left;
+	width:302px;
+	height:40px;
+	margin-left:713px;
+	margin-top:94px;
+}
+
+#header_logo_sou_w{
+	float:left;
+	margin-left:5px;
+	margin-top:7px;
+	width:233px;
+	height:25px;
+	}
+#header_logo_sou_s a{
+	
+	float:left;
+	margin-left:1px;
+	margin-top:5px;
+	width:58px;
+	height:29px;
+	font-size:15px;
+	font-weight:bolder;
+	}
+#header_navi{
+	background:url(images/navi.gif);
+	float:left;
+	width:1024px;
+	height:50px;
+}
+#header_navi ul{
+	list-style:none;
+	width:100%;	height:50px;
+}
+#header_navi ul li{
+	float:left;
+	width:168px;height:50px;
+}
+#header_navi ul li a{
+	display: block;
+	text-align:center;
+	height:47px;
+	width:140px;
+	line-height:47px;
+	font-size:17px;
+	font-weight:bolder;
+	color:white;
+	text-decoration:none;
+}
+#header_navi ul li a:hover{
+	display:block;margin-left:10px;
+    background:url(images/onclick.gif);
+	color:#FFF;width:166px;height:49px;
+}
+#navi{
+	
+	float:left;
+	border-top:#DBDBDB 1px solid;
+	border-bottom:#DBDBDB 1px solid;
+	margin-top:35px;
+	width:1024px;
+	height:31px;
+	}
+#navi .l{
+	font-weight:bold;
+	float:left;
+	margin-left:75px;
+	margin-top:5px;
+	font-size:14px;
+	}
+#navi .r{
+	
+	float:left;
+	margin-left:450px;
+	margin-top:5px;
+	font-size:14px;
+	}
+#navi .r a{
+	color:#F00;
+	}
+#kuang{
+	padding-top:10px;
+	background:#F6F6F6;
+	float:left;
+	border:#DBDBDB 1px solid;
+	margin-top:50px;
+	margin-left:100px;
+	width:480px;
+	height:320px;
+	}
+#kuang form{
+	float:left;
+	margin-left:80px;
+	margin-top:20px;
+	}
+#kuang form .l{
+	float:left;
+	margin-left:80px;
+	margin-top:0px;
+	}
+
+
+#kuang hr {
+	float:left;
+	width:400px;
+	margin-left:40px;
+	margin-top:25px;
+	border:1px dotted #CCC;
+	}
+#kuang p a {
+	text-decoration:none;
+	font-size:14px;
+	float:left;
+	width:200px;
+	margin-left:240px;
+	margin-top:25px;
+	color:#F00;
+	}
+
+
+
+
+#foot{}

@@ -1,0 +1,384 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0px;
+	padding:0px;
+}
+
+#container{
+	width:1024px;
+	height:1200px;
+	margin:auto;
+	/*background:url(images/g.jpg);*/
+}
+
+#left{
+	float:left;
+	width:650px;
+	height:923px;
+	margin-left:12px;
+}
+#left_re{
+	background:url(images/beijing.jpg);
+	margin-top:22px;
+	float:left;
+	width:650px;
+	height:218px;
+	border:#CC0 solid 1px;
+}
+#left_re_navi{
+	background:url(images/renavi.gif);
+    float:left;
+	width:650px;
+	height:30px;
+}
+#left_re_navi .m{
+	display:block;
+	font-size:18px;
+	font-weight:bold;
+	color:#375E00;
+	margin-top:3px;margin-left:26px;
+    float:left;
+	width:130px;
+	height:20px;
+	
+}
+#left_re_navi .n{
+	display:block;
+	margin-top:2px;margin-left:380px;
+    float:left;
+	width:77px;
+	height:27px;
+}
+#left_re_navi .n a{
+	text-decoration:none;
+	font-size:15px;
+	font-weight:bold;
+	color:#F2AF11;
+	font-family:"Arial Black", Gadget, sans-serif;
+	}
+#left_re_navi .n a:hover{
+	color:#F00;
+	}
+#left_zui{background:url(images/beijing.jpg);
+	margin-top:22px;
+	float:left;
+	width:650px;
+	height:218px;
+	border:#CC0 solid 1px;
+}
+#left_zui_navi{
+	background:url(images/renavi.gif);
+    float:left;
+	width:650px;
+	height:30px;
+}
+#left_zui_navi .m{
+	display:block;
+	font-size:18px;
+	font-weight:bold;
+	color:#375E00;
+	margin-top:3px;margin-left:26px;
+    float:left;
+	width:130px;
+	height:20px;
+	
+}
+#left_zui_navi .n{
+	display:block;
+	margin-top:2px;margin-left:380px;
+    float:left;
+	width:77px;
+	height:27px;
+}
+#left_zui_navi .n a{
+	text-decoration:none;
+	font-size:15px;
+	font-weight:bold;
+	color:#F2AF11;
+	font-family:"Arial Black", Gadget, sans-serif;
+	}
+#left_zui_navi .n a:hover{
+	color:#F00;
+	}
+#left_lei{background:url(images/beijing.jpg);
+	margin-top:22px;
+	float:left;
+	width:650px;
+	height:218px;
+	border:#CC0 solid 1px;
+}
+#left_lei_navi{
+	background:url(images/renavi.gif);
+    float:left;
+	width:650px;
+	height:30px;
+}
+#left_lei_navi .m{
+	display:block;
+	font-size:18px;
+	font-weight:bold;
+	color:#375E00;
+	margin-top:3px;margin-left:26px;
+    float:left;
+	width:130px;
+	height:20px;
+	
+}
+#left_lei_navi .n{
+	display:block;
+	margin-top:2px;margin-left:380px;
+    float:left;
+	width:77px;
+	height:27px;
+}
+#left_lei_navi .n a{
+	text-decoration:none;
+
+	font-weight:bold;
+	color:#F2AF11;
+	font-family:"Arial Black", Gadget, sans-serif;
+	}
+#left_lei_navi .n a:hover{
+	color:#F00;
+	}
+#left_liu{
+	margin-top:22px;
+	float:left;
+	width:650px;
+	height:148px;
+	border:#CC0 solid 1px;
+}
+#left_liu_navi{
+	background:url(images/renavi.gif);
+    float:left;
+	width:650px;
+	height:30px;
+}
+#left_liu_navi .m{
+	display:block;
+	font-size:18px;
+	font-weight:bold;
+	color:#375E00;
+	margin-top:3px;margin-left:26px;
+    float:left;
+	width:130px;
+	height:20px;
+	
+}
+#left_liu_navi .n{
+	display:block;
+	margin-top:2px;margin-left:380px;
+    float:left;
+	width:77px;
+	height:27px;
+}
+#left_liu_navi .n a{
+	text-decoration:none;
+	font-size:15px;
+	font-weight:bold;
+	color:#F2AF11;
+	font-family:"Arial Black", Gadget, sans-serif;
+	}
+#left_liu_navi .n a:hover{
+	color:#F00;
+	}
+#right{
+	
+	background:#FFF;
+	float:left;
+	margin-top:19px;
+	margin-left:17px;
+	border:#9C0 solid 2px;
+	float:left;
+	width:322px;
+	height:876px;
+
+}
+#right_personal{
+	background:url(images/rightdi_e.jpg);
+	padding-top:10px;
+	padding-left:20px;
+	padding-right:20px;
+	border:#CCC 2px solid;
+	float:left;
+	width:171px;
+	height:136px;
+	margin-left:49px;
+	margin-top:10px;
+}
+#right_personal h1{
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+}
+#right_personal p{
+	float:left;
+	margin-top:6px;
+	
+	font-size:13px;
+	color:#C36;
+}
+#right_personal h2 a{
+	float:left;
+	
+	margin-top:47px;
+	color:#906;
+	font-size:13px;
+	font-weight:bold;
+}
+#right_personal h3 a{
+	float:left;
+	margin-left:130px;
+	margin-top:10px;
+	color:#906;
+	font-size:13px;
+	font-weight:bold;
+}
+#right_top{
+	background:url(images/beijing.jpg);
+	color:#000;
+	font-size:14px;
+	float:left;
+	width:312px;
+	height:250px;
+margin-left:4px;
+	margin-top:10px;
+	border-top:#ADC16E solid 2px;
+	
+}
+
+#right_top_navi{
+	width:312px;
+	margin-top:3px;
+	background:#AEDF62;
+    float:left;
+	
+	height:27px;
+}
+#right_top_navi .m{
+	display:block;
+	font-size:14px;
+	font-weight:bold;
+	color:#476F0D;
+	margin-top:3px;margin-left:5px;
+    float:left;
+	width:130px;
+	height:20px;
+	
+}
+#right_top_navi .n{
+	display:block;
+	margin-top:2px;margin-left:97px;
+    float:left;
+	width:60px;
+	height:20px;
+}
+#right_top_navi .n a{
+	text-decoration:none;
+	font-size:15px;
+	font-weight:bold;
+	color:#F7AC0B;font-family:"Arial Black", Gadget, sans-serif;
+	}
+#right_top_navi .n a:hover{
+	color:#F00;
+	}
+#right_xiaoshuo{
+	background:url(images/beijing.jpg);
+	color:#000;
+	font-size:14px;
+	float:left;
+	width:312px;
+	height:250px;
+margin-left:4px;
+	margin-top:10px;
+	border-top:#ADC16E solid 2px;
+	
+}
+
+#right_xiaoshuo_navi{width:312px;
+	margin-top:3px;
+	background:#AEDF62;
+    float:left;
+	
+	height:27px;
+}
+#right_xiaoshuo_navi .m{
+	display:block;
+	font-size:14px;
+	font-weight:bold;
+	color:#476F0D;
+	margin-top:3px;margin-left:5px;
+    float:left;
+	width:130px;
+	height:20px;
+	
+}
+#right_xiaoshuo_navi .n{
+	display:block;
+	margin-top:2px;margin-left:97px;
+    float:left;
+	width:60px;
+	height:20px;
+}
+
+#right_xiaoshuo_navi .n a{
+	text-decoration:none;
+	font-size:15px;
+	font-weight:bold;
+	color:#F7AC0B;font-family:"Arial Black", Gadget, sans-serif;
+	}
+#right_xiaoshuo_navi .n a:hover{
+	color:#F00;
+	}
+#right_lianjie{
+	color:#000;
+	font-size:14px;
+	float:left;
+	width:312px;
+	height:180px;
+margin-left:4px;
+	margin-top:10px;
+	border-top:#ADC16E solid 2px;
+	border-bottom:#ADC16E solid 2px;
+	background:url(images/beijing.jpg);
+}
+
+#right_lianjie_navi{
+	background:#AEDF62;
+	margin-top:3px;
+	
+    float:left;
+	width:312px;
+	height:27px;
+}
+#right_lianjie_navi .m{
+	display:block;
+	font-size:14px;
+	font-weight:bold;
+	color:#476F0D;
+	margin-top:3px;margin-left:5px;
+    float:left;
+	width:130px;
+	height:20px;
+	
+}
+
+
+
+#right_lianjie_navi .n{
+	display:block;
+	margin-top:2px;margin-left:97px;
+    float:left;
+	width:60px;
+	height:20px;
+}
+#right_lianjie_navi .n a{
+	text-decoration:none;
+	font-size:15px;
+	font-weight:bold;
+color:#F7AC0B;font-family:"Arial Black", Gadget, sans-serif;
+	}
+#right_lianjie_navi .n a:hover{
+	color:#F00;
+	}

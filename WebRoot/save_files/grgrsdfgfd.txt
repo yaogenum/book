@@ -1,0 +1,1187 @@
+package boxcal;
+
+import java.io.IOException;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@SuppressWarnings("serial")
+public class Servlet_1 extends HttpServlet {
+	public void init(ServletConfig config)
+    throws ServletException{
+		super.init(config);
+	}
+
+	public void doPost(HttpServletRequest req,
+            HttpServletResponse resp)
+     throws ServletException{
+		req.getSession().setAttribute("name", "hello");
+		req.setAttribute("info", "world");
+		RequestDispatcher re=req.getRequestDispatcher("/javabean_1.jsp");//可以返回request的内容，但是response.Redirect("url");
+		try {
+			re.forward(req,resp);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+		}	
+	}
+	public void doGet(HttpServletRequest req,
+            HttpServletResponse resp)
+     throws ServletException{
+		this.doGet(req, resp);
+	}
+
+	
+	public void destroy(){}
+}
+
+
+
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@SuppressWarnings("serial")
+public class Servlet extends HttpServlet {
+	public void init(ServletConfig config) throws ServletException{
+		super.init(config);
+	}
+	public void service(HttpServletRequest request,HttpServletResponse response) throws IOException{
+		response.setContentType("text/html;charset=gb2312");
+		PrintWriter out=response.getWriter();
+	
+		out.println("<html><body>");
+		out.println("这是一个简单的servlet--客户端ip地址为："+request.getRemoteAddr());
+		
+		out.println("</html></body>");
+	}
+}
+二叉树
+# include <iostream>
+using namespace std;
+
+typedef int TElemType;
+
+typedef struct BiTNode{
+	TElemType data;
+	struct BiTNode *lchild,*rchild;
+}BiTNode,*BiTree;
+
+int visit(TElemType e){
+		cout <<"此节点的值是：" << e << endl;
+		return 0;
+}
+
+int preordertraverse(BiTree T){
+	if(T){
+		if(visit(T->data)){
+			if(preordertraverse(T->lchild)){
+				if(preordertraverse(T->rchild)){
+					return 1;
+				}
+			}
+		}
+		return 0;
+	}
+	else{
+		return 1;
+	}
+}
+
+int creatbitree(BiTree &T){
+	cout << "请输入本节点的值:"<<endl;
+	int ch=10000;
+	cin >> ch;
+	if(ch==10000){
+		T=0;
+	}
+	else{
+		if(!(T=(BiTNode *)malloc(sizeof(BiTNode)))){
+			exit(0);
+		}
+		else{
+			T->data=ch;
+			creatbitree(T->lchild);
+			creatbitree(T->rchild);
+		}
+	}
+	return(0);
+}
+
+int main(){
+	BiTree tree;
+	creatbitree(tree);
+	preordertraverse(tree);
+}
+java连接数据库步骤
+package sql;
+import java.sql.*;
+public class Sql {
+	public static void main(String args[]){
+		Connection con=null;
+		Statement stata=null;
+		ResultSet get=null;
+		try{
+			Class.forName("org.gjt.mm.mysql.Driver");
+		//	Class.forName("mysql-connector-java-5.1.22\\src\\org\\gjt\\mm\\mysql\\Driver");
+			System.out.println("ok");
+		}
+		catch(Exception e){
+			System.out.println("error"+e.getMessage());
+		}
+		
+		try{
+			//String url="jdbc:mysql://localhost:3306/mldn","root","123"";
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mldn","root","123");
+			stata=con.createStatement();
+			get=stata.executeQuery("SELECT *FROM data");
+			System.out.println("ko");
+			while(get.next()){
+				System.out.println(get.getString("name"));
+			}
+			get.close();
+			stata.close();
+			con.close();
+		}
+		catch(SQLException e){
+			e.printStackTrace();
+			e=e.getNextException();
+		}
+	}
+}
+session()public void doPost(HttpServletRequest req,
+            HttpServletResponse resp)
+     throws ServletException,
+            java.io.IOException{
+		//resp.setContentType("");
+		PrintWriter out=resp.getWriter();
+	//	out.println("<html><body>");
+		Cookie cookie;
+		String s1,s2;
+		cookie=new Cookie("cookie-param","param1");
+		s1=cookie.getName();
+		s2=cookie.getValue();
+	//	out.println("<p>"+s1+"----"+s2+"</p>");
+		HttpSession session=req.getSession(true);
+		cookie.setComment("this is a content");
+		s1=cookie.getComment();
+		cookie.setMaxAge(200);
+		out.println("s434444444444444g");
+		//out.println("</body><html/>");
+	}
+	线程调用计数
+	package servlet;
+
+import java.io.IOException;
+import java.lang.*;
+import javax.servlet.*;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.sun.org.apache.xml.internal.serialize.Printer;
+
+public class Servlet_1 extends HttpServlet implements Runnable {
+	int lastrn;
+	Thread thread;
+	public void init(ServletConfig config)
+    throws ServletException{
+		super.init(config);
+		thread=new Thread(this);
+		thread.start();
+		lastrn=1;
+	}
+	
+	public void run(){
+		while(true){
+			try{
+				thread.sleep(500);
+				
+			}
+			catch(Exception e){}
+			lastrn++;
+		if(lastrn==1000){
+			lastrn=1;
+		}
+		}
+		
+	}
+	
+
+public void doPost(HttpServletRequest req,
+            HttpServletResponse resp)
+     throws ServletException,
+            java.io.IOException{
+		resp.setContentType("html;charset=gb2312");
+		PrintWriter out=resp.getWriter();
+		out.println("<html><body><p>");
+		out.println("numble is"+lastrn);
+		out.println("</p></body></html>");
+		out.println();
+		out.println();
+	}
+public void doGet(HttpServletRequest req,
+        HttpServletResponse resp)
+ throws ServletException,
+        java.io.IOException{
+		this.doPost(req, resp);
+	}
+
+public void destroy(){
+	thread.stop();
+}
+}
+//处理字符串
+package servlet;
+
+import java.io.UnsupportedEncodingException;
+
+public class Encoding {
+	String s;
+	Encoding(){
+	}
+	public String tochinese(String s){
+		this.s=s;
+		try {
+			byte bytechinese[]=s.getBytes("ISO-8859-1");
+			String s1=new String(bytechinese);
+			return s1;
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		  return("errors");
+		}
+		}
+}
+
+
+停车场
+# include <stdio.h>
+# include <malloc.h>
+# include <cmath>
+# include <iostream>
+# include <string.h>
+# include <time.h>
+
+# define ERROR 0;
+# define QElemType int
+# define Status int
+# define OK 1
+# define time_t int
+# define STACK_INIT_SIZE 40
+# define STACK_INIT_SIZE1 100
+# define STACKINCREMENT 10
+# define Status int
+# define SElemType int
+# define ERROR 0;
+
+int allamount=3;//n表示栈大小 
+int nowamount=0;
+int queueamount=0;
+int leave=0;
+int pay=10;
+int timer=0;
+//建链式队列
+typedef struct QNode{
+	QElemType data;
+	struct QNode *next;
+}QNode,*QueuePtr;
+
+typedef struct {
+	QueuePtr front;
+	QueuePtr rear;
+}LinkQueue;
+
+Status InitQueue(LinkQueue &Q){
+	Q.front=Q.rear=(QueuePtr)malloc(sizeof(QNode));
+	if(!Q.front) exit(OVERFLOW);
+	Q.front->next=NULL;
+	return OK;
+}
+
+Status DestroyQueue(LinkQueue &Q){
+	while(Q.front){
+		Q.rear=Q.front->next;
+		free(Q.front);
+		Q.front=Q.rear;
+	}
+
+	return OK;
+}
+
+Status EnQueue(LinkQueue &Q,QElemType e){
+	QNode *p;
+	p=(QueuePtr)malloc(sizeof(QNode));
+	if(!p)exit(OVERFLOW);
+	p->data=e;
+	p->next=NULL;
+	Q.rear->next=p;
+	Q.rear=p;
+	queueamount++;
+	printf("确定%d号进入候车道，现有%d辆车进入候车道\n",p->data,queueamount);//	printf("确定%d号进入候车道\n",Q.rear->data);rear有数据超front一格
+	return OK;
+}
+
+bool DeQueue(LinkQueue &Q,QElemType &e){//errors
+	QNode *p;
+	if(Q.front==Q.rear) 
+	{
+		printf("候车道已无车\n");
+		return false;
+		queueamount=0;
+	}
+	else{
+	queueamount--;
+	p=Q.front->next;
+	e=p->data;
+	printf("确定%d号离开候车道，进入停车道,候车道内剩下%d辆车\n",p->data,queueamount);
+	Q.front=p;
+	//free(p);
+	return true;
+	}
+}
+
+//建顺序栈
+typedef struct {
+	QElemType *base;
+	QElemType *top;
+	QElemType *carnum;
+	QElemType *fromtime;
+	QElemType *endtime;
+	int stacksize;
+}Linkstack;
+
+Status InitStack1(Linkstack &S){
+	S.base=(SElemType *)malloc((STACK_INIT_SIZE1)*sizeof(SElemType));
+	S.carnum=(SElemType *)malloc((STACK_INIT_SIZE1)*sizeof(SElemType));
+	S.fromtime=(SElemType *)malloc((STACK_INIT_SIZE1)*sizeof(SElemType));
+	S.endtime=(SElemType *)malloc((STACK_INIT_SIZE1)*sizeof(SElemType));
+	if(!S.base){
+		exit(OVERFLOW);
+	}
+	else{
+		S.top=S.base;
+		*(S.top)=0;
+		*(S.carnum)=0;
+		*(S.fromtime)=0;
+		*(S.endtime)=0;
+		S.stacksize=STACK_INIT_SIZE;
+		return OK;
+	}
+}
+
+Status InitStack(Linkstack &S){
+	S.base=(SElemType *)malloc((STACK_INIT_SIZE)*sizeof(SElemType));
+	S.carnum=(SElemType *)malloc((STACK_INIT_SIZE)*sizeof(SElemType));
+	S.fromtime=(SElemType *)malloc((STACK_INIT_SIZE)*sizeof(SElemType));
+	S.endtime=(SElemType *)malloc((STACK_INIT_SIZE)*sizeof(SElemType));
+	if(!S.base){
+		exit(OVERFLOW);
+	}
+	else{
+		S.top=S.base;
+		*(S.top)=0;
+		*(S.carnum)=0;
+		*(S.fromtime)=0;
+		*(S.endtime)=0;
+		S.stacksize=STACK_INIT_SIZE;
+		return OK;
+	}
+}
+Status Enstack(Linkstack &S,QElemType e,QElemType time1){
+	if(nowamount<allamount){
+		S.top++;
+		S.carnum++;
+		S.fromtime++;
+		S.endtime++;
+	
+		*(S.carnum)=e;
+		*(S.fromtime)=time1;
+		*(S.endtime)=0;
+
+		printf("确定%d号车%d时间进入停车道\n",*(S.carnum),*(S.fromtime));
+		nowamount++;
+		leave=allamount-nowamount;
+		printf("确定停车道剩下%d个停车道\n",leave);
+		return true;
+	}
+	else{
+		
+		printf("停车场位数已满，请进入候车道！\n");
+		return(false);
+	}
+}
+
+bool instack(Linkstack &S,QElemType e,QElemType time1){
+		S.top++;
+		S.carnum++;
+		S.fromtime++;
+		S.endtime++;
+	
+		*(S.carnum)=e;
+		*(S.fromtime)=time1;
+		*(S.endtime)=0;
+		return true;
+}
+bool outstack(Linkstack &S,QElemType &e,QElemType &time1){	
+		e=*(S.carnum);
+		time1=*(S.fromtime);
+		S.carnum--;
+		S.fromtime--;
+		S.endtime--;
+		S.top--;
+		return true;		
+}
+
+bool Destack(Linkstack &S,Linkstack &S2,QElemType e,QElemType t,QElemType &timecom){
+	int fromtimecur=0;
+	int carnumcur=0;
+	if(S.top==S.base) {
+		printf("停车场为空，别开玩笑了！\n");
+		return false;
+	}
+	else if((--S.top)==S.base){
+		nowamount--;
+		*(S.endtime)=t;
+		timecom=(*(S.endtime))-(*(S.fromtime));
+		printf("确定%d号车%d时间离开1111停车道,支付%d元钱\n",*(S.carnum),*(S.endtime),timecom*pay);
+		leave=allamount-nowamount;
+		printf("确定停车道剩下%d个停车道\n",leave);
+
+		S.carnum--;
+		S.fromtime--;
+		S.endtime--;
+		S.top=S.base;
+		return true;
+	}
+	else{
+		nowamount--;
+	
+		while(*(S.carnum)!=e){
+			instack(S2,*(S.carnum),*(S.fromtime));
+			//拿出前面的元素
+			S.carnum--;
+			S.fromtime--;
+			S.endtime--;
+			S.top--;	
+		}
+	    *(S.endtime)=t;
+		timecom=*(S.endtime)-*(S.fromtime);
+		printf("确定%d号车%d时间离开11停车道,支付%d元\n",*(S.carnum),*(S.endtime),timecom*pay);//,支付%d元钱,timecom*pay
+		leave=allamount-nowamount;
+		printf("确定停车道剩下%d个停车道\n",leave);
+	//返回拿出的元素
+		bool boola=false;
+		while(boola==false){
+			boola=outstack(S2,carnumcur,fromtimecur);
+			Enstack(S,carnumcur,fromtimecur);
+			nowamount--;
+		}
+		return true;
+		}	
+}
+
+void main(){
+	LinkQueue queue;
+    InitQueue(queue);
+	Linkstack stack,stackcur;
+	InitStack(stack);
+	InitStack1(stackcur);
+	int timecom=0;
+	int carnum=0;
+	int loop=0;
+	bool boolean=false;
+	char function='B';
+	time_t fromtime=0;
+	time_t endtime=0;	//fromtime=time(NULL);
+	printf("**********请输入你选择的功能*************\n");
+	printf("A:停车    D:离开      E:结束\n");
+	printf("    请按enter键确认开始  \n");
+	
+	while(function!='E'){
+		getchar();
+		printf("请输入功能值:");
+		scanf("%c",&function);	//	printf("有%d辆车进入停车道\n",nowamount);
+		switch(function){
+			case 'A':loop=0
+					;printf("请输入停车车牌号:");scanf("%d",&carnum)
+					;EnQueue(queue,carnum);
+					if(nowamount>=allamount){printf("停车场车！！！已满\n");}else {
+					;printf("请输入停车时间:");scanf("%d",&fromtime);DeQueue(queue,carnum)
+					;Enstack(stack,carnum,fromtime);//循环没控制好
+					;printf("操作已完成\n");};printf("有%d辆车进入停车道\n",nowamount);break;//完成入队操作
+			case 'D':loop=2;if(nowamount==0){printf("无车，不能操作\n");}else{printf("请输入离去车牌号:");scanf("%d",&carnum);printf("请输入离开时间:");scanf("%d",&endtime)
+					;boolean=Destack(stack,stackcur,carnum,endtime,timecom)
+					;if(boolean==true){printf("请支付%d元钱\n",(timecom*pay));};printf("操作已完成\n")
+					;if(nowamount<3){printf("停车道有剩余车道可以停车\n");}
+					;if(queueamount<=0){printf("候车道中没有停车\n");}else{DeQueue(queue,carnum)
+					;printf("请输入系统自动调入d号车进入停车场的时间:",carnum);scanf("%d",&fromtime);
+					;Enstack(stack,carnum,fromtime);}
+					;}break;
+			case 'E':printf("已经退出此功能:");break;			
+		}
+		printf("\n");
+		
+	}
+
+}
+	/*else{
+		nowamount--;
+	//p=S.base->next;//base不指向数据
+		pselect=S.top;
+	//	p=S.top;
+	//e=p->carnum;
+	//p->endtime=t;
+		pbefore=S.top;
+		while(pselect->carnum!=e){
+		//p=pselect;
+			pbefore=pselect;
+			pselect=pselect->next;
+			printf("--%d,%d ---\n",pbefore->carnum,pbefore->fromtime);
+			printf("---%d,%d ---\n",pselect->carnum,pselect->fromtime);
+		}
+		pselect->endtime=t;
+		timecom=(pselect->endtime)-(pselect->fromtime);
+		printf("确定%d号车%d时间离开1111停车道,支付%d元钱\n",pselect->carnum,pselect->endtime,timecom*pay);
+		if(pselect->next==S.base)
+		{
+			printf("停车场已为空\n");
+			free(pbefore);
+			free(pselect);
+			S.top=S.base;
+		//	free(p);
+		
+		}
+		else{
+		//	p=pselect;
+			pselect=pselect->next;
+			printf("-----%d,%d",pselect->carnum,pselect->fromtime);
+			pbefore->next=pselect;
+			printf("中间节点");
+		}
+	leave=allamount-nowamount;
+	printf("确定停车道剩下%d个停车道\n",leave);
+	return(true);
+	}
+
+
+
+
+/*
+typedef struct QNodestack{
+	QElemType carnum;
+	QElemType fromtime;
+	QElemType endtime;
+	struct QNodestack *next;
+}QNodestack,*stackPtr;
+
+typedef struct {
+	stackPtr top;
+	stackPtr base;
+}Linkstack;
+Status Initstack(Linkstack &S){
+	S.base=S.top=(stackPtr)malloc(sizeof(QNodestack));
+	if(!S.base) exit(OVERFLOW);
+	S.base->next=NULL;
+	return OK;
+}
+
+
+
+
+bool Enstack(Linkstack &S,QElemType e,QElemType time1){//没有控制入栈数量存carnum
+	exit(OVERFLOW);
+		p->carif(nowamount<allamount){
+		QNodestack *pselect;
+	//	time_t fromtimestack=0;
+	//	fromtimestack=time(NULL);
+		QNodestack *p;
+		p=(stackPtr)malloc(sizeof(QNodestack));
+		if(!p)num=e;
+		p->fromtime=time1;
+		//printf("aaa%d,%d",	p->carnum,p->fromtime);
+		//p->endtime=time2;
+
+		p->next=S.top;
+		//S.top=p->next;
+		S.top=p;
+
+		//S.top->fromtime=time1;
+		//S.top->carnum=e;
+		printf("---%d",S.top->fromtime1);
+
+		printf("确定%d号车%d时间进入停车道\n",S.top->carnum,S.top->fromtime);
+	//	S.top->next=p;	
+	//	S.top=p;//S.top->next;//top指向数据
+		nowamount++;
+		leave=allamount-nowamount;
+		printf("确定停车道剩下%d个停车道\n",leave);
+
+		if(nowamount==3){
+		while(S.top!=S.base){
+			printf("---%d,%d ---\n",S.top->carnum,S.top->fromtime);
+			S.top=S.top->next;
+		}
+		}
+		return true;
+	}
+	else{
+		
+		printf("停车场位数已满，请进入候车道！\n");
+		return(false);
+	}
+}
+
+bool Destack(Linkstack &S,QElemType &e,QElemType t,QElemType &timecom){//出栈不能随意出栈top有值
+	QNodestack *pselect,*pbefore,*p;//*p
+	if(S.top==S.base) {
+		printf("停车场为空，别开玩笑了！\n");
+		return false;
+	}
+	else if(S.top->next==S.base){
+		nowamount--;
+		pselect=S.top;
+		pselect->endtime=t;
+		timecom=(pselect->endtime)-(pselect->fromtime);
+		printf("确定%d号车%d时间离开1111停车道,支付%d元钱\n",pselect->carnum,pselect->endtime,timecom*pay);
+		leave=allamount-nowamount;
+		printf("确定停车道剩下%d个停车道\n",leave);
+		free(pselect);
+		S.top=S.base;
+		return true;
+	}
+	else{
+		nowamount--;
+		pselect=S.top;
+		pbefore=S.top;
+	
+	while(pselect->carnum!=e){
+			pbefore=pselect;
+			pselect=pselect->next;
+			printf("--%d,%d ---\n",pbefore->carnum,pbefore->fromtime);
+			printf("---%d,%d ---\n",pselect->carnum,pselect->fromtime);
+		}
+		pselect->endtime=t;
+		timecom=(pselect->endtime)-(pselect->fromtime);
+		printf("确定%d号车%d时间离开11停车道\n",pselect->carnum,pselect->endtime);//,支付%d元钱,timecom*pay
+		
+		pbefore->next=pselect->next;
+		
+		leave=allamount-nowamount;
+		printf("确定停车道剩下%d个停车道\n",leave);
+
+	
+		return true;
+		}
+	
+	/*else{
+		nowamount--;
+	//p=S.base->next;//base不指向数据
+		pselect=S.top;
+	//	p=S.top;
+	//e=p->carnum;
+	//p->endtime=t;
+		pbefore=S.top;
+		while(pselect->carnum!=e){
+		//p=pselect;
+			pbefore=pselect;
+			pselect=pselect->next;
+			printf("--%d,%d ---\n",pbefore->carnum,pbefore->fromtime);
+			printf("---%d,%d ---\n",pselect->carnum,pselect->fromtime);
+		}
+		pselect->endtime=t;
+		timecom=(pselect->endtime)-(pselect->fromtime);
+		printf("确定%d号车%d时间离开1111停车道,支付%d元钱\n",pselect->carnum,pselect->endtime,timecom*pay);
+		if(pselect->next==S.base)
+		{
+			printf("停车场已为空\n");
+			free(pbefore);
+			free(pselect);
+			S.top=S.base;
+		//	free(p);
+		
+		}
+		else{
+		//	p=pselect;
+			pselect=pselect->next;
+			printf("-----%d,%d",pselect->carnum,pselect->fromtime);
+			pbefore->next=pselect;
+			printf("中间节点");
+		}
+	leave=allamount-nowamount;
+	printf("确定停车道剩下%d个停车道\n",leave);
+	return(true);
+	}*/
+
+//	timecom=(p->endtime)-(p->fromtime);
+//	printf("确定%d号车%d时间离开停车道\n",p->carnum,p->endtime);
+//	t=endtimestack-(p->fromtime);
+	
+//	S.base->next=p->next;//消除出栈元素
+
+//	if(S.top==p) {S.base=S.top;}
+//	free(p);
+
+/*	int carip=0;
+	int cartime=10;
+	Linkstack stack;
+	Initstack(stack);
+	char i='1';
+
+	printf("请输入入栈车牌号:");
+	scanf("%d",&carip);
+	Enstack(stack,carip);
+	while(i=='1'){
+		printf("shuru:");
+		scanf("%d",&i);
+		printf("\n");
+	}
+	Destack(stack,carip,cartime);
+	printf("----%d,%d",carip,cartime);
+	*/
+
+//printf("%d",currTime);获取当前时间
+//scanf("%d",&carnum);DeQueue(queue,carnum);printf("以确定%d,号车在出队\n",carnum);
+//scanf("%d",&carnum);EnQueue(queue,carnum);printf("以确定%d号车在入队\n",carnum);
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
+
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0"
+  metadata-complete="true">
+
+  <display-name>Welcome to Tomcat</display-name>
+  <description>
+     Welcome to Tomcat
+  </description>
+
+</web-app>
+
+
+<html><body>  
+<%   
+    String input=request.getParameter("input");   
+    String code=(String)session.getAttribute("code");       
+    if(input.equals(code)){   
+        out.println("验证成功!");   
+    }else{   
+        out.println("验证失败!");   
+    }   
+%>  
+body>html> 
+
+select dintinct from tableb避免查询查复
+select *from table limit numbel限制条数
+select *from table where (not)like %字符%,通配符_ [charcter] between and or as
+
+多个表查询，table1 （left/right/full）join table2 on 条件
+[]不行，insert into ，unique不懂
+servlet/Users_indicate
+		out.println("<HTML>");
+		out.println("  <HEAD><TITLE>A Servlet</TITLE></HEAD>");
+		out.println("  <BODY>");
+		out.println("<p>"+code+"</p>");
+		out.println("<p>"+code+"</p>");
+		out.println("  </BODY>");
+		out.println("</HTML>");
+		out.flush();
+		out.close();
+		/*
+		 * 		String yanzhen=request.getParameter("yanzhen");
+		String code=(String)request.getSession().getAttribute(yanzhen);
+		if(yanzhen.equals(code)){
+			response.sendRedirect("register.jsp");
+		}
+		else{
+			response.sendRedirect("login.jsp");
+		}
+		
+		 * 
+		 * String name=request.getParameter("users_name");
+		String password = request.getParameter("users_password");
+		Mysql_connect indicate=new Mysql_connect();
+		
+		
+		indicate.class_forname();
+		String sql="select *from users where users_name=? and users_password=?";
+		indicate.p_state_prepared(sql);
+		try {
+			indicate.p_state.setString(1,name);
+			indicate.p_state.setString(2,password);
+			indicate.result=indicate.p_state.executeQuery();
+			if(indicate.result.next()){
+				bool=true;
+				indicate.close(indicate.result);
+				response.sendRedirect("users_succeed.jsp");
+			}
+			else{
+				indicate.close(indicate.result);
+				response.sendRedirect("login.jsp");
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		/*
+	public void state_prepared(){
+		try {
+			con=DriverManager.getConnection(url,"root","");
+			state=con.createStatement();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public ResultSet result_statement(String sql){
+		try {
+			return(state.executeQuery(sql));
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+			return(null);
+		}
+	}
+	
+	
+	public boolean insert(String sql){
+		
+		try {
+			state.execute(sql);
+			bool=true;
+		} 
+		catch (SQLException e) {
+			bool=false;
+			e.printStackTrace();
+		}
+		return bool;
+	}
+	
+	public boolean update(String sql){
+		try {
+			state.execute(sql);
+			bool=true;
+		} 
+		catch (SQLException e) {
+			// TODO Auto-generated catch block
+			bool=false;
+			e.printStackTrace();
+		}
+		return bool;
+	}
+	
+	public boolean delete(String sql){
+		try {
+			state.execute(sql);
+			bool=true;
+		} 
+		catch (SQLException e) {
+			// TODO Auto-generated catch block
+			bool=false;
+			e.printStackTrace();
+		}
+		return bool;
+	}
+	*/
+	var file = document.getElementsByName("books_pic")[0].value;
+	    if(file=="")
+	    {
+	 	    alert("请选着文件");	 	 
+	 	    return false;
+	    }
+var b=/\w+\.([jpg|png|gif|bmp|jpeg]){1}$/;
+		
+	    var miao = file.match(b); 
+	    //alert(miao);
+	    if(miao==null)
+	    {
+	    	alert("文件格式不正确");
+	    	return false;
+	    }
+2
+3
+4
+5
+6
+7
+var regex = /\.txt$/gi;
+ 
+if(regex.test(document.getElementById("file").value)) {
+    // ok
+} else {
+    // error
+}
+var pos=file.lastIndexOf(".");
+var su = te.substring(pos+1);
+var b=/\w+\.([jpg|png|gif|bmp|jpeg]){1}$/;
+		if(!su.match(b )){
+			alert("文件格式不对");
+			return false；
+		}
+		if(!regex.test(f.file.value)) {
+			alert("格式文件不对");
+	 	    f.file.focus();	 	 
+	 	    return false;
+	 }
+	 else if(){}
+	  /\.txt$/gi;
+
+
+
+	  <html>
+<head>
+	<title>www.mldnjava.cn，MLDN高端Java培训</title>
+	<script language="javascript">
+		var xmlHttp ;
+		var flag = false ;
+		function createXMLHttp(){
+			if(window.XMLHttpRequest){
+				xmlHttp = new XMLHttpRequest() ;
+			} else {
+				xmlHttp = new ActiveXObject("Microsoft.XMLHTTP") ;
+			}
+		}
+		function checkUserid(userid){
+			createXMLHttp() ;
+			xmlHttp.open("POST","CheckServlet?userid="+userid) ;
+			xmlHttp.onreadystatechange = checkUseridCallback ;
+			xmlHttp.send(null) ;
+			document.getElementById("msg").innerHTML = "正在验证..." ;
+		}
+		function checkUseridCallback(){
+			if(xmlHttp.readyState == 4){
+				if(xmlHttp.status == 200){
+					
+					var text = xmlHttp.responseText ;
+					if(text == "true"){	// 用户id已经存在了
+						document.getElementById("msg").innerHTML = "用户ID重复，无法使用！" ;
+						flag = false ;
+					} else {
+						document.getElementById("msg").innerHTML = "此用户ID可以注册！" ;
+						flag = true ;
+					}
+				}
+			}
+		}
+		function checkForm(){
+			return flag ;
+		}
+	</script>
+</head>
+<body>
+<form action="regist.jsp" method="post" onsubmit="return checkForm()">
+	用户ID：<input type="text" name="userid" onblur="checkUserid(this.value)"><span id="msg"></span><br>
+	姓&nbsp;&nbsp;名：<input type="text" name="name"><br>
+	密&nbsp;&nbsp;码：<input type="password" name="password"><br>
+	<input type="submit" value="注册">
+	<input type="reset" value="重置">
+</form>
+</body>
+</html>
+阅读接口x需要两个参数<a href="servlet/Href_read?books_name=<%=books_name%>&file_name=<%=books_path%>">阅读</a>
+<%
+	List<String> info=(List<String>)request.getAttribute("info");
+	if(info!=null){
+		Iterator<String> iter= info.iterator();
+		while(iter.hasNext()){
+			%>
+				<p><%=iter.next() %></p>
+			<%
+		}
+	}
+%>
+<%
+	List<String> info=(List<String>)request.getAttribute("info");
+	if(info!=null){
+		Iterator<String> iter= info.iterator();
+		while(iter.hasNext()){
+			%>
+				<p><%=iter.next() %></p>
+			<%
+		}
+	}
+%>
+<%
+	List<String> info=(List<String>)request.getAttribute("info");
+	if(info!=null){
+		Iterator<String> iter= info.iterator();
+		while(iter.hasNext()){
+			%>
+				<p><%=iter.next() %></p>
+			<%
+		}
+	}
+%>
+<%
+	List<String> info=(List<String>)request.getAttribute("info");
+	if(info!=null){
+		Iterator<String> iter= info.iterator();
+		while(iter.hasNext()){
+			%>
+				<p><%=iter.next() %></p>
+			<%
+		}
+	}
+%>
+
+
+
+	<script type="text/javascript">
+		var xmlHttp;
+		function createXMLHttp(){
+			if(window.XMLHttpRequest){
+				xmlHttp = new XMLHttpRequest() ;
+			} else {
+				xmlHttp = new ActiveXObject("Microsoft.XMLHTTP") ;
+			}
+		}
+		function xiazai(){
+			createXMLHttp() ;	// 创建XMLHttp对象
+			
+			xmlHttp.open("POST","servlet/test") ;
+			// 设置操作的回调函数
+			xmlHttp.onreadystatechange = xiazaiCallback ;
+			xmlHttp.send(null) ;
+		}
+		function xiazaiCallback(){
+			if(xmlHttp.readyState == 4){	// 调用完成
+				if(xmlHttp.status == 200){	
+					var text=xmlHttp.responseText ;
+					document.getElementById("msg").innerHTML = text ;
+					alert("下载完成");
+				}
+			}
+		}
+	</script>
+	while(iter.hasNext()){
+			%>
+				<p><%=iter.next() %></p>
+			<%
+		}
+	}
+	<p id="books_name"> </p>
+
+<script type="text/javascript">
+	var infor=Array();
+	infor[0]=<%="hello" %>
+	document.getElementById("books_name").innerHTML=infor[0];
+</script>
+var str=window.location.href;
+	var es=/books_path=/;
+		es.exec(str);
+	var right=RegExp.rightContext;
+	
+	var locations=window.location.href;
+	var nowcounts=/nowcount/;
+		nowcounts.exec(locations);
+		var str=window.location.href;
+	var es=/books_path=/;
+		es.exec(str);
+	var right=RegExp.rightContext;
+	
+	var locations=window.location.href;
+	var nowcounts=/nowcount/;
+	var nowcount=RegExp.rightContext;
+		nowcounts.exec(locations);
+		 <span id="tishi_tag" ></span>
+	<a href="book/read.jsp" target="_blank" onclick="tag_information()">点击获得书签继续阅读</a>
+column:<p id="column">${info['clo']}</p>
+
+	 books_name:<p id="books_nam">${info}</p>
+	 tag_time:<p id="tag_time">${info}</p>
+	 <p> books_name:<span id="books_name">${info}</span></p>
+	 <input type="button" name="read" value="read"
+				onclick="tag_information()">
+			<input type="button" name="delete" value="delete">
+			
+			<br />
+			<c:if test="${info}" var="rest">
+			<p>-------------------------</p>
+			</c:if>
+			
+			
+			+"&books_path="+${info[i+2]}+"&nowcount="+${info[i+3]+"&books_name="+${info[i]}
+			 --disable-web-security
+			 	<p align="center">
+	歌曲名：<input type="text" name="song_name" onblur="get_name(this.value)"/>
+	歌手：<input type="text" name="songer" onblur="get_songer(this.value)"/>
+	<input type="button" name="que" value="搜索" onclick="sou_music()"></p>
+	<span id="jieguo"></span>
+<h3><font color="green">输入歌手和歌曲名找歌曲</font></h3>  
+<form action="servlet/MusicServlet" method="post" target="_blank"> 
+歌手名：<p><input type="text" name="person_name"  onblur="get_name(this.value)" /><br>  </p>
+歌曲名：<p><input type="text" name="music_name"  onblur="get_songer(this.value)"/> <br>  </p>
+<input type="submit" value="播放"   />
+</form>
+
+
+function save_records(){
+		createXMLHttp();
+		xmlHttp.open("GET", "servlet/MusicServlet?person_name="+songer+"&music_name="+song_name+"&users_name="+users_name+"&books_name="+books_name+"&leibie="+leibie);
+		//	xmlHttp.open("POST", "servlet/MusicServlet?person_name=刘德华&music_name=冰雨");
+		xmlHttp.onreadystatechange=sou_musicCallback;
+		xmlHttp.send(null);
+	} 		 
+	function save_recordsCallback(){
+		if (xmlHttp.readyState == 4) {
+			if (xmlHttp.status == 200){
+				var text=xmlHttp.responseText;
+				document.getElementById("errors").innerHTML=text;
+			}
+		}
+	}
+
+	   <c:forEach var="lists" items="list">
+   ${list}
+   </c:forEach>
+   你好
+   <%@ taglib uri="/WEB-INF/lib/c.tld" prefix="c" %>

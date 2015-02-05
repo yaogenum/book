@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+img{ border:0; display:block;vertical-align:middle}
+#imgBox{border-right:1px solid #3B8C54; border-bottom:1px solid #3B8C54; background:#84B726; padding:5px;}
+#imgBox div{width:700px; background:#B5DF63; border:1px solid #DAEFB1; border-top:1px solid #6D9720; border-left:1px solid #6D9720; overflow:hidden}
+#imgBox,#imgBox ul,#imgBox li{ float:left;}
+#imgBox ul{ width:4100px;}
+#imgBox a{ padding:6px; display:block; background:#fff; margin:10px; border:1px solid #A5D845; text-align:center; text-decoration:none}
+#imgBox span{ display:block; background:#FFFF99; border-top:1px solid #FFFFFF}
+#imgBox a:hover{ border:1px solid #84B726; border-left:1px solid #fff; border-top:1px solid #fff; background:#95CC2D;}
+#imgBox a:hover span{ background:#000; color:#fff}

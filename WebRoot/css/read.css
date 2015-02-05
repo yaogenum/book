@@ -1,0 +1,61 @@
+
+@charset "utf-8";
+/* CSS Document */
+
+
+*{
+	margin:0px;
+	padding:0px;
+}
+
+#container{
+	width:1024px;
+	height:1200px;
+	margin:auto;
+	background: url("images/g.jpg") ;
+}
+
+/*background:url(../images/read1.jpg);*/
+#kuang{
+	padding-top:10px;
+	
+	float:left;
+	border:#D0E860 2px solid;
+	margin-top:15px;
+	margin-left:60px;
+	width:880px;
+	height:auto;
+	}
+#kuang{
+	padding-top:20px;
+	padding-left:50px;
+	
+	}
+#kuang p.up{
+	
+	font-size:16px;
+	font-weight:bold;
+	color:#690;
+	}
+#kuang input{
+	
+	font-size:15px;
+
+	}
+
+#content{
+background: url("images/g.jpg") ;
+	background-repeat:repeat-y;
+	padding:5px 5px 5px 5px;
+	float:left;
+	border:#CCC 3px solid;
+	margin-top:10px;
+	margin-left:5px;
+	width:830px;
+	min-height:500px;
+	}
+#content p{
+	
+	 word-spacing:25px;
+	}
+
